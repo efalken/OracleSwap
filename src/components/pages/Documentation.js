@@ -374,7 +374,7 @@ class Documentation extends Component {
                     <a
                       className="nav-header"
                       style={{ textDecoration: "none", cursor: "pointer" }}
-                      href="http://github.com/lorenzobotticelli/OracleSwap"
+                      href="http://github.com/efalken/OracleSwap"
                     >
                       Github Project
                     </a>

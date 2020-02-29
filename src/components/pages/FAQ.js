@@ -460,8 +460,8 @@ class FAQ extends Component {
           <p ><span >·<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </span></span>How to contact</p>
 
-          <p >The creator of this contract is at lorenzob at protonmail
-          dot com. The oracle of this contract has a Gab account at @gab. Please keep
+          <p >The creator of this contract is at ericf@efalken.com
+          dot com. Please keep
           questions and comments focused on product functionality.</p>
 
           </div>

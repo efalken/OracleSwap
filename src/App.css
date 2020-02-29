@@ -1,0 +1,146 @@
+body::-webkit-scrollbar {
+    width: 0;
+    overflow: hidden;
+}
+ 
+body::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(112, 180, 63, 0.4);
+  border-radius: 4px; */
+}
+
+ 
+.nav-header:hover {
+  color: rgb(112, 180, 63);
+}
+
+.header-logo {
+  transition: transform .2s;
+}
+
+.header-logo:hover {
+  transform: scale(0.98)
+}
+
+.etherscanLink:hover {
+	transform: scale(0.95);
+	cursor: pointer;
+}
+
+a.faqs-link:hover {
+    background: #424242;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 800;
+}
+
+/* a.docu-header:hover {
+	color: rgb(112, 180, 63) !important;
+}
+
+a.docu-header:hover, a.docu-header:hover p, a.docu-header:hover span {
+    color: #9A1A4A;
+} */
+
+p.docu-header, li.docu-header, div.docu-header  {
+	/* margin-top: 0in !important; 
+	margin-right: 0in !important; 
+	margin-bottom:  8.0pt !important; 
+	margin-left:  0in !important; 
+	line-height:  105% !important;  */
+	font-size:  12px !important; 
+	font-family:  "Times New Roman",serif !important; 
+}
+
+a.docu-header:hover, p.docu-header:hover > span:hover {
+		color: rgb(112, 180, 63) !important;
+}
+
+/* h1.tech-head {
+	margin-top:12.0pt !important;
+	margin-right:0in !important;
+	margin-bottom:0in !important;
+	margin-left:0in !important;
+	margin-bottom:.0001pt !important;
+	line-height:105% !important;
+	page-break-after:avoid !important;
+	font-size:16.0pt !important;
+	font-family:"Times New Roman",serif !important;
+	color:#2F5496 !important;
+  font-weight:normal !important;
+}
+  
+h2.tech-head {
+	margin-top:2.0pt !important;
+	margin-right:0in !important;
+	margin-bottom:0in !important;
+	margin-left:0in !important;
+	margin-bottom:.0001pt !important;
+	line-height:105% !important;
+	page-break-after:avoid !important;
+	font-size:13.0pt !important;
+	font-family:"Times New Roman",serif !important;
+	color:black !important;
+  font-weight:normal !important;
+}
+
+h3.tech-head {
+	margin-top:2.0pt !important;
+	margin-right:0in !important;
+	margin-bottom:0in !important;
+	margin-left:0in !important;
+	margin-bottom:.0001pt !important;
+	line-height:105% !important;
+	page-break-after:avoid !important;
+	font-size:12.0pt !important;
+	font-family:"Times New Roman",serif !important;
+	color:black !important;
+  font-weight:normal !important;
+} */
+
+/* span.MsoHyperlink {
+	color:#002060 !important; 
+	text-decoration:underline !important; 
+}
+a:visited, span.MsoHyperlinkFollowed {
+	color:#954F72 !important; 
+	text-decoration:underline !important; 
+}
+  
+span.Heading1Char {
+	font-family:"Times New Roman",serif !important; 
+	color:#2F5496 !important; 
+}
+
+span.Heading2Char {
+	font-family:"Times New Roman",serif !important; 
+	color:black !important; 
+}
+span.Heading3Char {
+	font-family:"Times New Roman",serif !important; 
+	color:black !important; 
+}
+
+p.msonormal0, li.msonormal0, div.msonormal0 {
+	margin-right:0in !important; 
+	margin-left:0in !important; 
+	font-size:12.0pt !important; 
+	font-family:"Times New Roman",serif !important; 
+}
+.MsoChpDefault {
+	font-size:10.0pt !important; 
+	font-family:"Calibri",sans-serif !important; 
+} */
+
+
+
+/*  green
+   rgb(213, 87, 87)  red */ 

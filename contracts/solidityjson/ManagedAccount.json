@@ -1,0 +1,666 @@
+{
+  "contractName": "ManagedAccount",
+  "abi":     [
+		{
+			"inputs": [
+				{
+					"internalType": "address payable",
+					"name": "_manager",
+					"type": "address"
+				},
+				{
+					"internalType": "address payable",
+					"name": "_investor",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_fee",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "payor",
+					"type": "address"
+				}
+			],
+			"name": "AddedFunds",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "payee",
+					"type": "address"
+				}
+			],
+			"name": "RemovedFunds",
+			"type": "event"
+		},
+		{
+			"payable": true,
+			"stateMutability": "payable",
+			"type": "fallback"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				}
+			],
+			"name": "activateEndBook",
+			"outputs": [],
+			"payable": true,
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				}
+			],
+			"name": "addSwap",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "newFee",
+					"type": "uint256"
+				}
+			],
+			"name": "adjFee",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "uint16",
+					"name": "amount",
+					"type": "uint16"
+				},
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				}
+			],
+			"name": "adjMinReqMarg",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"name": "approvedSwaps",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "lp",
+					"type": "address"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "id",
+					"type": "bytes32"
+				}
+			],
+			"name": "cancelSubcontract",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				},
+				{
+					"internalType": "uint16",
+					"name": "min",
+					"type": "uint16"
+				},
+				{
+					"internalType": "uint256",
+					"name": "closefee",
+					"type": "uint256"
+				},
+				{
+					"internalType": "int256",
+					"name": "fundingLong",
+					"type": "int256"
+				},
+				{
+					"internalType": "int256",
+					"name": "fundingShort",
+					"type": "int256"
+				}
+			],
+			"name": "createBook",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "bool",
+					"name": "_managerStatus",
+					"type": "bool"
+				}
+			],
+			"name": "disableManager",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [],
+			"name": "fund",
+			"outputs": [],
+			"payable": true,
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				}
+			],
+			"name": "fundBookMargin",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "lp",
+					"type": "address"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "subkid",
+					"type": "bytes32"
+				}
+			],
+			"name": "fundTakerMargin",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "investor",
+			"outputs": [
+				{
+					"internalType": "address payable",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				}
+			],
+			"name": "investorWithdraw",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "lastUpdateTime",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "manager",
+			"outputs": [
+				{
+					"internalType": "address payable",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "managerBalance",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "managerStatus",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [],
+			"name": "managerWithdraw",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "mgmtFee",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "ourSwaps",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "ourTakerContracts",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "seeAUM",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "totTakerBalance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "totLPBalance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "thisAccountBalance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_managerBalance",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "close",
+					"type": "uint256"
+				},
+				{
+					"internalType": "int256",
+					"name": "longFR",
+					"type": "int256"
+				},
+				{
+					"internalType": "int256",
+					"name": "shortFR",
+					"type": "int256"
+				}
+			],
+			"name": "setFees",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "lp",
+					"type": "address"
+				},
+				{
+					"internalType": "uint16",
+					"name": "rM",
+					"type": "uint16"
+				},
+				{
+					"internalType": "bool",
+					"name": "takerLong",
+					"type": "bool"
+				}
+			],
+			"name": "takeFromLP",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"name": "takercontracts",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "swapAddress",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "lp",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "index",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "totAUMlag",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [],
+			"name": "updateFee",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				}
+			],
+			"name": "withdrawFromAS",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				},
+				{
+					"internalType": "uint16",
+					"name": "amount",
+					"type": "uint16"
+				}
+			],
+			"name": "withdrawFromBook",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "swap",
+					"type": "address"
+				},
+				{
+					"internalType": "uint16",
+					"name": "amount",
+					"type": "uint16"
+				},
+				{
+					"internalType": "address",
+					"name": "lp",
+					"type": "address"
+				},
+				{
+					"internalType": "bytes2",
+					"name": "subkid",
+					"type": "bytes2"
+				}
+			],
+			"name": "withdrawFromSubk",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

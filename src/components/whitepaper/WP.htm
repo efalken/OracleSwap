@@ -1,0 +1,2531 @@
+<style>
+  <!--
+  /* Font Definitions */
+  @font-face {
+    font-family: Wingdings;
+    panose-1: 5 0 0 0 0 0 0 0 0 0;
+    mso-font-charset: 2;
+    mso-generic-font-family: auto;
+    mso-font-pitch: variable;
+    mso-font-signature: 0 268435456 0 0 -2147483648 0;
+  }
+
+  @font-face {
+    font-family: "Cambria Math";
+    panose-1: 2 4 5 3 5 4 6 3 2 4;
+    mso-font-charset: 0;
+    mso-generic-font-family: roman;
+    mso-font-pitch: variable;
+    mso-font-signature: 3 0 0 0 1 0;
+  }
+
+  @font-face {
+    font-family: Calibri;
+    panose-1: 2 15 5 2 2 2 4 3 2 4;
+    mso-font-charset: 0;
+    mso-generic-font-family: swiss;
+    mso-font-pitch: variable;
+    mso-font-signature: -469750017 -1073732485 9 0 511 0;
+  }
+
+  @font-face {
+    font-family: "Calibri Light";
+    panose-1: 2 15 3 2 2 2 4 3 2 4;
+    mso-font-charset: 0;
+    mso-generic-font-family: swiss;
+    mso-font-pitch: variable;
+    mso-font-signature: -469750017 -1073732485 9 0 511 0;
+  }
+
+  @font-face {
+    font-family: "Segoe UI";
+    panose-1: 2 11 5 2 4 2 4 2 2 3;
+    mso-font-charset: 0;
+    mso-generic-font-family: swiss;
+    mso-font-pitch: variable;
+    mso-font-signature: -469750017 -1073683329 9 0 511 0;
+  }
+
+  /* Style Definitions */
+  p.MsoNormal,
+  li.MsoNormal,
+  div.MsoNormal {
+    mso-style-unhide: no;
+    mso-style-qformat: yes;
+    mso-style-parent: "";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 8.0pt;
+    margin-left: 0in;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 12.0pt;
+    color: #9FB8FF;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  h1 {
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-qformat: yes;
+    mso-style-link: "Heading 1 Char";
+    margin-top: 12.0pt;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: 0in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    page-break-after: avoid;
+    mso-outline-level: 1;
+    font-size: 16.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #9FB8FF;
+    font-weight: bold;
+  }
+
+  h2 {
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-qformat: yes;
+    mso-style-link: "Heading 2 Char";
+    margin-top: 2.0pt;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .5in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    page-break-after: avoid;
+    mso-outline-level: 2;
+    font-size: 13.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #9FB8FF;
+    font-weight: bold;
+  }
+
+  h3 {
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-qformat: yes;
+    mso-style-link: "Heading 3 Char";
+    margin-top: 2.0pt;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: 1.0in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    page-break-after: avoid;
+    mso-outline-level: 3;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #9FB8FF;
+    font-weight: bold;
+  }
+
+  h4 {
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-qformat: yes;
+    mso-style-link: "Heading 4 Char";
+    margin-top: 2.0pt;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: 0in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    page-break-after: avoid;
+    mso-outline-level: 4;
+    font-size: 10.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #9FB8FF;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  p.MsoToc1,
+  li.MsoToc1,
+  div.MsoToc1 {
+    mso-style-update: auto;
+    mso-style-noshow: yes;
+    mso-style-priority: 39;
+    margin: 0in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoToc2,
+  li.MsoToc2,
+  div.MsoToc2 {
+    mso-style-update: auto;
+    mso-style-noshow: yes;
+    mso-style-priority: 39;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .15in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoToc3,
+  li.MsoToc3,
+  div.MsoToc3 {
+    mso-style-update: auto;
+    mso-style-noshow: yes;
+    mso-style-priority: 39;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: 22.3pt;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoFootnoteText,
+  li.MsoFootnoteText,
+  div.MsoFootnoteText {
+    mso-style-priority: 99;
+    mso-style-link: "Footnote Text Char";
+    margin: 0in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    font-size: 10.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #9FB8FF;
+  }
+
+  p.MsoCommentText,
+  li.MsoCommentText,
+  div.MsoCommentText {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-link: "Comment Text Char";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 8.0pt;
+    margin-left: 0in;
+    mso-pagination: widow-orphan;
+    font-size: 10.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoHeader,
+  li.MsoHeader,
+  div.MsoHeader {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-link: "Header Char";
+    margin: 0in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoFooter,
+  li.MsoFooter,
+  div.MsoFooter {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-link: "Footer Char";
+    margin: 0in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  span.MsoFootnoteReference {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    vertical-align: super;
+  }
+
+  span.MsoEndnoteReference {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    vertical-align: super;
+  }
+
+  p.MsoEndnoteText,
+  li.MsoEndnoteText,
+  div.MsoEndnoteText {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-link: "Endnote Text Char";
+    margin: 0in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    font-size: 10.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  a:link,
+  span.MsoHyperlink {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    color: #80A2FF;
+    text-decoration: underline;
+    text-underline: single;
+  }
+
+  a:visited,
+  span.MsoHyperlinkFollowed {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    color: #4D7CFF;
+    text-decoration: underline;
+    text-underline: single;
+  }
+
+  p {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-margin-top-alt: auto;
+    margin-right: 0in;
+    mso-margin-bottom-alt: auto;
+    margin-left: 0in;
+    mso-pagination: widow-orphan;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoAcetate,
+  li.MsoAcetate,
+  div.MsoAcetate {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-link: "Balloon Text Char";
+    margin: 0in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    font-size: 9.0pt;
+    font-family: "Segoe UI", sans-serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  span.MsoPlaceholderText {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    color: gray;
+  }
+
+  p.MsoRMPane,
+  li.MsoRMPane,
+  div.MsoRMPane {
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    margin: 0in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoListParagraph,
+  li.MsoListParagraph,
+  div.MsoListParagraph {
+    mso-style-priority: 34;
+    mso-style-unhide: no;
+    mso-style-qformat: yes;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 8.0pt;
+    margin-left: .5in;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MsoTocHeading,
+  li.MsoTocHeading,
+  div.MsoTocHeading {
+    mso-style-priority: 39;
+    mso-style-unhide: no;
+    mso-style-qformat: yes;
+    margin-top: 12.0pt;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: 0in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    page-break-after: avoid;
+    font-size: 16.0pt;
+    font-family: "Calibri Light", sans-serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #A5A5A5;
+  }
+
+  span.Heading1Char {
+    mso-style-name: "Heading 1 Char";
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Heading 1";
+    font-family: "Times New Roman", serif;
+    mso-ascii-font-family: "Times New Roman";
+    mso-hansi-font-family: "Times New Roman";
+    mso-bidi-font-family: "Times New Roman";
+    color: #9FB8FF;
+    font-weight: bold;
+  }
+
+  span.Heading2Char {
+    mso-style-name: "Heading 2 Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Heading 2";
+    font-family: "Times New Roman", serif;
+    mso-ascii-font-family: "Times New Roman";
+    mso-hansi-font-family: "Times New Roman";
+    mso-bidi-font-family: "Times New Roman";
+    color: #9FB8FF;
+    font-weight: bold;
+  }
+
+  span.Heading3Char {
+    mso-style-name: "Heading 3 Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Heading 3";
+    font-family: "Times New Roman", serif;
+    mso-ascii-font-family: "Times New Roman";
+    mso-hansi-font-family: "Times New Roman";
+    mso-bidi-font-family: "Times New Roman";
+    color: #9FB8FF;
+    font-weight: bold;
+  }
+
+  span.Heading4Char {
+    mso-style-name: "Heading 4 Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 9;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Heading 4";
+    font-family: "Times New Roman", serif;
+    mso-ascii-font-family: "Times New Roman";
+    mso-hansi-font-family: "Times New Roman";
+    mso-bidi-font-family: "Times New Roman";
+    color: #9FB8FF;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  p.msonormal0,
+  li.msonormal0,
+  div.msonormal0 {
+    mso-style-name: msonormal;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-margin-top-alt: auto;
+    margin-right: 0in;
+    mso-margin-bottom-alt: auto;
+    margin-left: 0in;
+    mso-pagination: widow-orphan;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  span.FootnoteTextChar {
+    mso-style-name: "Footnote Text Char";
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Footnote Text";
+  }
+
+  span.CommentTextChar {
+    mso-style-name: "Comment Text Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Comment Text";
+    font-family: "Times New Roman", serif;
+    mso-ascii-font-family: "Times New Roman";
+    mso-hansi-font-family: "Times New Roman";
+    mso-bidi-font-family: "Times New Roman";
+  }
+
+  span.HeaderChar {
+    mso-style-name: "Header Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: Header;
+  }
+
+  span.FooterChar {
+    mso-style-name: "Footer Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: Footer;
+  }
+
+  span.EndnoteTextChar {
+    mso-style-name: "Endnote Text Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Endnote Text";
+  }
+
+  span.BalloonTextChar {
+    mso-style-name: "Balloon Text Char";
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: "Balloon Text";
+    font-family: "Segoe UI", sans-serif;
+    mso-ascii-font-family: "Segoe UI";
+    mso-hansi-font-family: "Segoe UI";
+    mso-bidi-font-family: "Segoe UI";
+  }
+
+  span.ListParagraphChar {
+    mso-style-name: "List Paragraph Char";
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: msolistparagraphcxsplast;
+  }
+
+  p.msolistparagraphcxspfirst,
+  li.msolistparagraphcxspfirst,
+  div.msolistparagraphcxspfirst {
+    mso-style-name: msolistparagraphcxspfirst;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-link: "List Paragraph Char";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .5in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.msolistparagraphcxspmiddle,
+  li.msolistparagraphcxspmiddle,
+  div.msolistparagraphcxspmiddle {
+    mso-style-name: msolistparagraphcxspmiddle;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-link: "List Paragraph Char";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .5in;
+    margin-bottom: .0001pt;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.msolistparagraphcxsplast,
+  li.msolistparagraphcxsplast,
+  div.msolistparagraphcxsplast {
+    mso-style-name: msolistparagraphcxsplast;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-link: "List Paragraph Char";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 8.0pt;
+    margin-left: .5in;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 11.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.MTDisplayEquation,
+  li.MTDisplayEquation,
+  div.MTDisplayEquation {
+    mso-style-name: MTDisplayEquation;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .25in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    background: white;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #222222;
+  }
+
+  span.MTDisplayEquationChar {
+    mso-style-name: "MTDisplayEquation Char";
+    mso-style-unhide: no;
+    mso-style-locked: yes;
+    mso-style-link: MTDisplayEquationCxSpLast;
+    font-family: "Times New Roman", serif;
+    mso-ascii-font-family: "Times New Roman";
+    mso-hansi-font-family: "Times New Roman";
+    mso-bidi-font-family: "Times New Roman";
+    color: #222222;
+    background: white;
+  }
+
+  p.MTDisplayEquationCxSpFirst,
+  li.MTDisplayEquationCxSpFirst,
+  div.MTDisplayEquationCxSpFirst {
+    mso-style-name: MTDisplayEquationCxSpFirst;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-link: "MTDisplayEquation Char";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .25in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    background: white;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #222222;
+  }
+
+  p.MTDisplayEquationCxSpMiddle,
+  li.MTDisplayEquationCxSpMiddle,
+  div.MTDisplayEquationCxSpMiddle {
+    mso-style-name: MTDisplayEquationCxSpMiddle;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-link: "MTDisplayEquation Char";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .25in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    background: white;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #222222;
+  }
+
+  p.MTDisplayEquationCxSpLast,
+  li.MTDisplayEquationCxSpLast,
+  div.MTDisplayEquationCxSpLast {
+    mso-style-name: MTDisplayEquationCxSpLast;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-style-link: "MTDisplayEquation Char";
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+    margin-left: .25in;
+    margin-bottom: .0001pt;
+    mso-pagination: widow-orphan;
+    background: white;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+    color: #222222;
+  }
+
+  p.msochpdefault,
+  li.msochpdefault,
+  div.msochpdefault {
+    mso-style-name: msochpdefault;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-margin-top-alt: auto;
+    margin-right: 0in;
+    mso-margin-bottom-alt: auto;
+    margin-left: 0in;
+    mso-pagination: widow-orphan;
+    font-size: 12.0pt;
+    font-family: "Calibri", sans-serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  p.msopapdefault,
+  li.msopapdefault,
+  div.msopapdefault {
+    mso-style-name: msopapdefault;
+    mso-style-noshow: yes;
+    mso-style-priority: 99;
+    mso-style-unhide: no;
+    mso-margin-top-alt: auto;
+    margin-right: 0in;
+    margin-bottom: 8.0pt;
+    margin-left: 0in;
+    line-height: 105%;
+    mso-pagination: widow-orphan;
+    font-size: 12.0pt;
+    font-family: "Times New Roman", serif;
+    mso-fareast-font-family: "Times New Roman";
+    mso-fareast-theme-font: minor-fareast;
+  }
+
+  span.MTEquationSection {
+    mso-style-name: MTEquationSection;
+    mso-style-unhide: no;
+    font-family: "Times New Roman", serif;
+    mso-ascii-font-family: "Times New Roman";
+    mso-hansi-font-family: "Times New Roman";
+    mso-bidi-font-family: "Times New Roman";
+    color: red;
+    display: none;
+    mso-hide: all;
+  }
+
+  span.UnresolvedMention1 {
+    mso-style-name: "Unresolved Mention1";
+    mso-style-unhide: no;
+    color: gray;
+    background: #E6E6E6;
+  }
+
+  span.UnresolvedMention2 {
+    mso-style-name: "Unresolved Mention2";
+    mso-style-unhide: no;
+    color: gray;
+    background: #E6E6E6;
+  }
+
+  span.MTConvertedEquation {
+    mso-style-name: MTConvertedEquation;
+    mso-style-unhide: no;
+  }
+
+  span.msoIns {
+    mso-style-type: export-only;
+    mso-style-name: "";
+    text-decoration: underline;
+    text-underline: single;
+    color: teal;
+  }
+
+  span.msoDel {
+    mso-style-type: export-only;
+    mso-style-name: "";
+    text-decoration: line-through;
+    color: red;
+  }
+
+  .MsoChpDefault {
+    mso-style-type: export-only;
+    mso-default-props: yes;
+    font-size: 10.0pt;
+    mso-ansi-font-size: 10.0pt;
+    mso-bidi-font-size: 10.0pt;
+    font-family: "Calibri", sans-serif;
+    mso-ascii-font-family: Calibri;
+    mso-hansi-font-family: Calibri;
+    mso-bidi-font-family: Calibri;
+  }
+
+  @page WordSection1 {
+    size: 8.5in 11.0in;
+    margin: 1.0in 1.0in 1.0in 1.0in;
+    mso-header-margin: .5in;
+    mso-footer-margin: .5in;
+    mso-paper-source: 0;
+  }
+
+  div.WordSection1 {
+    page: WordSection1;
+  }
+
+  /* List Definitions */
+  @list l0 {
+    mso-list-id: 2134130783;
+    mso-list-type: hybrid;
+    mso-list-template-ids: -2021985516 -702766896 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;
+  }
+
+  @list l0:level1 {
+    mso-level-number-format: bullet;
+    mso-level-text: *;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 45.0pt;
+    text-indent: -.25in;
+    font-family: "Times New Roman", serif;
+    color: #D9E2F3;
+    mso-themecolor: accent1;
+    mso-themetint: 51;
+  }
+
+  @list l0:level2 {
+    mso-level-number-format: bullet;
+    mso-level-text: o;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 81.0pt;
+    text-indent: -.25in;
+    font-family: "Courier New";
+  }
+
+  @list l0:level3 {
+    mso-level-number-format: bullet;
+    mso-level-text: \F0A7;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 117.0pt;
+    text-indent: -.25in;
+    font-family: Wingdings;
+  }
+
+  @list l0:level4 {
+    mso-level-number-format: bullet;
+    mso-level-text: \F0B7;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 153.0pt;
+    text-indent: -.25in;
+    font-family: Symbol;
+  }
+
+  @list l0:level5 {
+    mso-level-number-format: bullet;
+    mso-level-text: o;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 189.0pt;
+    text-indent: -.25in;
+    font-family: "Courier New";
+  }
+
+  @list l0:level6 {
+    mso-level-number-format: bullet;
+    mso-level-text: \F0A7;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 225.0pt;
+    text-indent: -.25in;
+    font-family: Wingdings;
+  }
+
+  @list l0:level7 {
+    mso-level-number-format: bullet;
+    mso-level-text: \F0B7;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 261.0pt;
+    text-indent: -.25in;
+    font-family: Symbol;
+  }
+
+  @list l0:level8 {
+    mso-level-number-format: bullet;
+    mso-level-text: o;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 297.0pt;
+    text-indent: -.25in;
+    font-family: "Courier New";
+  }
+
+  @list l0:level9 {
+    mso-level-number-format: bullet;
+    mso-level-text: \F0A7;
+    mso-level-tab-stop: none;
+    mso-level-number-position: left;
+    margin-left: 333.0pt;
+    text-indent: -.25in;
+    font-family: Wingdings;
+  }
+
+  ol {
+    margin-bottom: 0in;
+  }
+
+  ul {
+    margin-bottom: 0in;
+  }
+  -->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+</style>
+<![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#202020" lang=EN-US link="#80A2FF" vlink="#4D7CFF" style='tab-interval:.5in'>
+
+  <div class=WordSection1>
+
+    <h1><a name="_Toc27044348"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>1 </span></a><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>Introduction</span><span style='mso-fareast-font-family:"Times New Roman"'></span></h1>
+
+    &nbsp;
+
+    <p class=MsoNormal color:#9FB8FF'>OracleSwap is an oracle tied to
+      a specific suite of Ethereum swap contracts. Users create long or short swap
+      (aka CFD) positions that reference a unique Oracle contract that warehouses
+      prices</span><span style='mso-fareast-font-family:"Times New Roman";
+color:#222222'>.</span><a name="_ftnref1"></a><a href="#_ftn1"><span style='mso-bookmark:_ftnref1'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[1]</span></span></span><span
+          style='mso-bookmark:_ftnref1'></span></a><span style='mso-bookmark:_ftnref1'></span><span style='color:#9FB8FF'>
+
+        Initial contracts reference ETH/USD,
+        BTC/USD, and the US stock market (S&amp;P500). An emphasis on simplicity
+        reduces risk and makes the contract as straightforward as a vending machine,
+        one-click to take liquidity with all ETH secure in a verified contract, with no
+        emails or off-balance sheet processing: your margin is only accessible via your private key and the weekly settlement. Everything is open source, so users can
+        audit the contracts and download blockchain front-end onto their personal computer to enhance
+        privacy and security.</p>
+
+        <p class=MsoNormal>Secure property rights imply
+          free entry by firms and free choice among consumers, creating competition, the
+          ultimate form of decentralization. Ethereum is like Tor in that it cannot be
+          censored, facilitating entry and choice, but adds a secure payment system and
+          vendor accountability via its immutable and transparent blockchain</span><span style='mso-fareast-font-family:"Times New Roman";color:#222222'>.</span><a name="_ftnref2"></a><a href="#_ftn2"><span style='mso-bookmark:_ftnref2'><span
+                class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;
+    color:#9FB8FF'>[2]</span></span></span><span style='mso-bookmark:_ftnref2'></span></a><span style='mso-bookmark:_ftnref2'></span><span style='color:#9FB8FF'> OracleSwap is both a functional contract to use, and also a template for emulators. Ideally, there will be many liquidity providers on the initial OracleSwap contracts competing on fees, but also imitators, as copying this contract and administering its oracle requires the modest resources of your typical college student. A market of such dapps would make an outsider's attempt to censor a particular oracle as pointless as removing a PC from a peer-to-peer network.</p>
+
+    <p class=MsoNormal>Fewer agents and processes simplify the game,
+      making it easier to align incentives and reduce costs. The only users are <i>liquidity providers,</i>
+      <i>investors,</i> and the <i>oracle.</i> There are no tokens, wrappers, validators, settlers,
+      relayers, etc. We use a novel set of methods to minimize transaction costs and align incentives
+      to solve the oracle problem. Its radical shift is to have a pseudonymous oracle tied
+      to a specific contract in a repeated game with a form of mutually assured destruction:
+      it is straightforward to parameterize the contract so that the cost/benefit ratio for
+      cheating is 50/1.</p>
+
+    <p class=MsoNormal>Liquidity Providers (LPs) are
+      paid via closing fees and funding rates they set. LPs post ETH as margin,
+      allowing investors to take long or short positions that start at the next
+      business-day closing price, and their required margin covers their maximum
+      liability</span><span style='mso-fareast-font-family:"Times New Roman";
+color:#222222'>.</span><a name="_ftnref3"></a><a href="#_ftn3"><span style='mso-bookmark:_ftnref3'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[3]</span></span></span><span
+          style='mso-bookmark:_ftnref3'></span></a><span style='mso-bookmark:_ftnref3'></span><span style='color:#9FB8FF'> Fills are based on forward-starting prices, which
+        eliminates price-impact and front-running, simplifies oracle monitoring, and
+        eliminates the need for low-latency access. An LP's margin requirement is
+        netted and settlement is batched and scalable to thousands of investors,
+        creating attractive LP returns at attractive rates for investors. </p>
+
+    <p class=MsoNormal>OracleSwap targets long-term investors wanting to take
+      a position over the next several months. As many
+      are waiting for low-latency layer 2 solutions, it is important to understand
+      that low latency provides nothing of value to a long term investor:
+      forward-starting VWAP-style trade execution is considered best practice
+      for anyone but short-term speculators. We also provide Managed Account
+      contracts that allow ETH whales to delegate their ETH to managers who
+      can attend to LP duties while providing the safety of a traditional managed
+      account: the manager can only execute transactions with Oracle Swap,
+      and cannot send ETH to outside accounts or contracts. This provides a
+      way for large ETH holders to securely allow others to administer their
+      LP duties. As in everything in this contract, the only risk is via a
+      fraudulent oracle price. </p>
+
+    <p class=MsoNormal>A counterparty who does not
+      cancel merely needs to have sufficient margin to maintain their position.
+      Margins are debited/credited weekly, and a position's required margin caps the
+      PNL so that investors need only attend to their positions once a week to avoid
+      default. If one's counterparty cancels, they can costlessly put on a
+      replacement position as only the initiator of a cancel pays the cancel fee. </p>
+
+    <p class=MsoNormal>The Coase Theorem highlights how
+      low transaction costs and secure property rights are the foundation of efficient
+      economic outcomes</span>.<a name="_ftnref4"></a><a href="#_ftn4"><span style='mso-bookmark:_ftnref4'><span class=MsoFootnoteReference><span style='color:#9FB8FF'>[4]</span></span></span><span style='mso-bookmark:_ftnref4'></span></a><span
+        style='mso-bookmark:_ftnref4'></span><span style='color:#9FB8FF'> Novel
+        blockchain properties like anonymity and immutability have created unfamiliar
+        transaction costs that have stifled contract development. As the blockchain
+        creates the strongest property rights in human history, these problems should
+        be temporary. Financial derivatives are perfect candidates for smart contracts
+        because they apply simple rules to prices determined elsewhere. Conditional
+        upon accurate prices, it is straightforward to create a ledger within a
+        Solidity contract that is fair and secure. </p>
+
+    <h1><a name="_Toc27044349"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>2 Two Keys to Solving the Smart Contract Derivative Problem</span></a><span style='mso-bookmark:_Toc27044349'></span></h1>
+
+    &nbsp;
+
+    <h2><a name="_Toc27044350"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>2.1 No Limit</span></a><span style='mso-fareast-font-family:
+"Times New Roman";color:#CCDAFF'>-Order Book</span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>One key is <i>not</i> to emulate
+      a modern stock market. The standard is now the centralized limit order book,
+      where users costlessly post, take and cancel limit orders. These markets are
+      run on centralized databases and allow direct market access at under ten
+      milliseconds. In contrast, interacting with an Ethereum contract is at least
+      1000 times slower and more costly, creating a classic example of Akerlof's
+      market for lemons</span><span style='mso-fareast-font-family:"Times New Roman";
+color:#222222'>.</span><a name="_ftnref5"></a><a href="#_ftn5"><span style='mso-bookmark:_ftnref5'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[5]</span></span></span><span
+          style='mso-bookmark:_ftnref5'></span></a><span style='mso-bookmark:_ftnref5'></span><span style='color:#9FB8FF'> Compared to centralized exchanges, blockchain latency
+        forces market makers to post bid-ask spreads so wide they cannot attract the
+        casual traders needed to work well.</p>
+
+    <p class=MsoNormal>A standard central limit order
+      book has three types of traders: noise, informed, and market makers. <i>Noise </i>traders
+      do not affect the price because their order flow is random, which implies their
+      trades are small (large trades require multiple autocorrelated transactions). <i>Market
+        makers </i>provide instant liquidity by posting two-sided resting limit orders
+      where their bid is below their ask price. <i>Informed </i>traders have an
+      information advantage that predicts future order flow, which can come from
+      inside information or something as straightforward as knowing they have many
+      more orders to fill on the same side. In equilibrium, the market maker needs to
+      make enough revenue off the noise traders to cover the losses generated from
+      informed traders. </p>
+
+    <p class=MsoNormal>Higher latency subjects limit
+      orders to greater adverse selection, where the resting limit orders supplied by
+      market makers that tend to get filled are the bids that are too high or the
+      offers that are too low. Greater adverse selection causes the market makers to
+      post wide spreads compared to low latency markets, making the centralized
+      exchanges the dominant choice for noise traders. </p>
+
+    <p class=MsoNormal>The higher latency exchanges are
+      left with a higher proportion of informed traders, which in turn causes the
+      market makers to increase their bid-ask spreads further to compensate for the
+      greater adverse selection. These higher spreads disproportionately discourage
+      the day (noise) traders, as they have short horizons disproportionately
+      impacted by the spread. This positive-feedback loop causes markets to
+      ultimately unravel, as the noise traders essential for limit order books
+      disappear<span class=MsoHyperlink><span style='color:#9FB8FF;text-decoration:
+none;text-underline:none'>. </span></span>There is no chicken-and-egg problem
+      facing current blockchain-based limit order books; high spreads and low volumes
+      are intrinsic to any high-latency alternative market.</p>
+
+    <p class=MsoNormal>For long-term crypto investors, the
+      low-latency exchanges off the Ethereum blockchain come at a price. The lightly
+      regulated exchanges have considerable operational risk, and legal recourse in
+      the event of a dispute is improbable, making them imprudent for large sums. The
+      highly regulated exchanges have low credit risk and are essential for
+      converting between fiat and crypto, but they then put users back on the
+      traditional financial grid, removing anonymity, and have pathetic leverage and
+      shorting capabilities per regulatory dictates. </p>
+
+    <p class=MsoNormal>OracleSwap eliminates the limit
+      order book by using forward-starting, oracle-supplied prices to avoid latency
+      effects while staying on the blockchain. For assets with liquid cash markets,
+      price discovery is a problem already solved. This solution is inspired by
+      value-weighted-average-price (VWAP) transactions, a popular equity trading
+      tactic among long-term institutional investors. The time lag in trade execution
+      does not inconvenience long-term investors, and their fill efficiency can be
+      assessed quickly and easily. OracleSwap uses market-on-close orders, which are
+      conceptually similar to VWAP but more straightforward and efficient given the
+      liquid assets we are initially targeting</span><span style='mso-fareast-font-family:
+"Times New Roman";color:#222222'>.</span><a name="_ftnref6"></a><a href="#_ftn6"><span style='mso-bookmark:_ftnref6'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[6]</span></span></span><span
+          style='mso-bookmark:_ftnref6'></span></a><span style='mso-bookmark:_ftnref6'></span><span style='color:#9FB8FF'> </p>
+
+    <p class=MsoNormal>Most VWAP trading is done on a
+      best-effort basis, where the VWAP broker merely targets the 'average price' and
+      charges a fee (around 0.1 cents per share). This relationship puts the VWAP
+      brokers in the same position as our oracle: the main reason they do not charge
+      a dishonest price and make 30 times their fee in one day is the loss of future
+      business. Brokers are kept honest because they are playing a repeated game
+      where their actions are easy to monitor, and where the present value of honesty
+      dominates a feasible dishonest&#8212;but legal&#8212;payoff. </p>
+
+    <p class=MsoNormal>By avoiding the adverse
+      selection risk in limit order books, LPs neither endure this unnecessary
+      expense, nor do they need to invest time and money minimizing it. The absence
+      of limit order books also allows investors to avoid parceling out an order to
+      prevent moving market bid-ask prices, so completing a trade at a fair price
+      takes the same amount of time whatever the size. Lower indirect costs combined
+      with portfolio margining make it easier for LPs to generate an attractive
+      return at competitive rates for long-term investors. </p>
+
+    <h2><a name="_Toc27044351"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>2. 2 No Decentralized Oracle</span></a><span style='mso-fareast-font-family:
+"Times New Roman";color:#CCDAFF'> </span></h2>
+
+    <p class=MsoFootnoteText><a name="_Hlk23074972"><i><span style='font-size:11.0pt'>&nbsp;</span></i></a></p>
+
+    <p class=MsoFootnoteText><i><span style='font-size:11.0pt'>
+          <o:p>&nbsp;</o:p>
+        </span></i></p>
+
+    <p class=MsoNormal style='margin-top:0in;margin-right:.25in;margin-bottom:8.0pt;
+margin-left:.25in'><i><span style='color:#9FB8FF'>&quot;Ideally oracles are systems
+          that are trustless, meaning that they do not need to be trusted because they
+          operate on decentralized principles.&quot;</span></i></p>
+
+    <p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><i><span style='color:#9FB8FF'>Mastering Ethereum</span></i><span style='color:#9FB8FF'>,
+        Antonopolous and Wood</p>
+
+    <p class=MsoNormal>The common idea articulated by
+      Antonopolous and Wood is a major reason why Ethereum dapp development has been
+      slow. Decentralization is a good thing, but like democracy, not at every level.
+      A decentralized blockchain with contracting capability can give centrally administered
+      dapps the essential benefits of decentralization without the considerable
+      costs. A pseudonymous oracle embedded within a decentralized blockchain gives
+      it protection from outside attacks and censorship. The other decentralization
+      benefits, such as fault tolerance and conspiracy resistance, are easier to
+      achieve via a centralized oracle</span><span style='mso-fareast-font-family:
+"Times New Roman";color:#222222'>.</span><a name="_ftnref7"></a><a href="#_ftn7"><span style='mso-bookmark:_ftnref7'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[7]</span></span></span><span
+          style='mso-bookmark:_ftnref7'></span></a><span style='mso-bookmark:_ftnref7'></span><span style='color:#9FB8FF'> </p>
+
+    <p class=MsoNormal>The benefit of market
+      decentralization is that by giving individuals property rights, those with the
+      most relevant information have the incentive to allocate resources towards
+      their highest-valued use, the classic invisible hand of Adam Smith. While
+      decentralization is necessary for a prosperous economy, this does not imply
+      firms within such an economy must be decentralized, and very few are. In the
+      same way, while a blockchain must be decentralized to preserve essential crypto
+      principles, this does not imply oracles must be as well. The idea that oracles
+      must be decentralized is a <i>category error</i>, assuming the part must
+      independently have the properties of the whole.</p>
+
+    <p class=MsoNormal>Blockchain decentralization is
+      essential at its highest level to protect against outsiders or insiders who
+      would steal funds or peremptorily change the protocol, as a hard fork would
+      simply replace the attacked one. In this way, even though there are only a
+      handful of Ethereum mining pools, they are still fundamentally decentralized.</p>
+
+    <p class=MsoNormal>Conditional upon a blockchain's
+      core users demanding adherence to foundational bitcoin principles, it is
+      trustless only in the sense that mining pools have the ability but not the will
+      to implement a 51% attack. Anyone with the power to do so would be ruining a
+      costly investment for modest double-spend. We trust miners to act in their
+      self-interest. Our oracle is trustless in the same way.</p>
+
+    <p class=MsoNormal>Time-consuming mechanisms that
+      make it seemingly impossible for agents to collude are not just inefficient,
+      but nave. All functional dapps that profess an ultimate aim of having a
+      decentralized oracle parenthetically admit they have a centralized one
+      for the time being, and then emphasize the magic of decentralization. A
+      better objective is to make cheating possible but unattractive.
+      Things that work on the blockchain&#8212;MakerDAO's oracle, bitcoin mining pools,
+      Infura&#8212;all <i>can</i> collude maliciously, but their self-interest prevents
+      this. </p>
+
+    <p class=MsoNormal>A single agent with sole
+      non-transferable oracle rights and responsibilities has a stronger incentive to
+      be honest than a fluid set of agents reporting on a wide variety of events that
+      no one can easily monitor. Given permissionless access to the blockchain, a
+      consensus mechanism is both unnecessary and inefficient; there is no reason to
+      think that the key to creating an honest, accurate oracle is that they contain
+      legions. Decentralization is only necessary at a higher level; below that it is
+      strictly unhelpful. </p>
+
+    <p class=MsoNormal><i><span style='color:#9FB8FF'>Transaction Costs economics</span></i><span style='color:#9FB8FF'> analyzes why and how various transactions are performed
+        within firms rather than a market, and why market structures vary across
+        industries.</span><a name="_ftnref8"></a><a href="#_ftn8"><span style='mso-bookmark:_ftnref8'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[8]</span></span></span><span
+          style='mso-bookmark:_ftnref8'></span></a><span style='mso-bookmark:_ftnref8'></span><span style='color:#9FB8FF'> It is based on the idea that efficient solutions
+        minimize contextual transaction costs. These costs consist of search and
+        information costs, bargaining costs, and policing and enforcement costs. The
+        blockchain consensus has the unique ability to verify block integrity on chain, which makes
+        it a poor template for oracles where this is impossible.</p>
+
+    <p class=MsoNormal>The game-theoretic field of <i>mechanism
+        design</i> highlights two necessary conditions for a good dapp. First, there is
+      a <i>participation</i> constraint that motivates players to want to participate
+      in the oracle's game. A platform may incent honest reporting, but the
+      costs&#8212;not the explicit fees so much as the delay, complexity, and bid-ask
+      spread&#8212;make 'not playing' the preferred choice. Secondly, there is an <i>incentive
+        compatibility</i> constraint that the oracle achieves its best outcome by reporting
+      truthfully. Incentive compatibility is key to low-cost enforcement of
+      contracts, and historically this mechanism centered on reputation, not contract
+      law administered by the state.</span><a name="_ftnref9"></a><a href="#_ftn9"><span style='mso-bookmark:_ftnref9'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[9]</span></span></span><span
+          style='mso-bookmark:_ftnref9'></span></a><span style='mso-bookmark:_ftnref9'></span><span style='color:#9FB8FF'> When agents have incentives aligned with their
+        counterparties, we minimize policing and enforcement costs, which makes it
+        easier to satisfy the participation constraint.</p>
+
+    <p class=MsoNormal>Decentralized oracles create
+      several costs that have proved impossible to overcome. For example, a subset
+      within a decentralized oracle can reap 100% of the cheating benefits while
+      bearing less than 100% of the costs, meaning any minimum payment needed to keep
+      the oracle actor honest must be inflated. Sybil attacks are only solved by
+      implementing KYC or a whitelist, which removes anonymity and censorship
+      resistance. The diverse set of use cases imply that the oracle's incentives
+      will not be optimized for any specific contract they are servicing. Consensus
+      mechanisms add parties and processes that increase cost, complexity, and delay.
+    </p>
+
+    <p class=MsoNormal style='line-height:normal'><span style='color:#9FB8FF'>Simplicity
+        is essential for robust contracts because analyzing a game becomes
+        exponentially complicated as the number of actions and participants increases.
+        For example, to specify a general game in which <i>n</i> players each decide to
+        either cheat, play honestly, or free ride on whatever everyone else is doing, 3</span><i><sup><span style='font-size:14.0pt;color:#9FB8FF'>n</span></sup></i><span style='color:#9FB8FF'> scenarios arise. OracleSwap's oracle is the only
+        potential cheater (<i>n</i>=1), resulting in two scenarios (there is no free
+        riding with one agent).</span><a name="_ftnref10"></a><a href="#_ftn10"><span style='mso-bookmark:_ftnref10'><span class=MsoFootnoteReference><span style='font-size:11.0pt;color:#9FB8FF'>[10]</span></span></span><span
+          style='mso-bookmark:_ftnref10'></span></a><span style='mso-bookmark:_ftnref10'></span><span style='color:#9FB8FF'> </p>
+
+    <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in'><span style='color:#9FB8FF'>To align the oracle's
+        payoff space in a cryptoeconomically optimal way, one needs to create an oracle
+        payoff such that the benefit of truthful reporting always outweighs the costs
+        of misreporting. By having the oracle in total control, its revenue from truthful
+        reporting is maximized; by being unambiguously responsible and easy to audit
+        and punish, its costs from misreporting are fully born by the oracle; by
+        playing a specific repeated game the cost/benefit calculus is consistent each
+        week; by giving a cheated user the ability and incentive to punish a
+        cheating oracle, the cheat payoff minimized. These
+        all lead to the efficiency of a single-agent oracle. </p>
+
+
+    <h1><a name="_Toc27044352"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>3 The Oracl</span></a><span style='mso-bookmark:_Toc27044352'></span><span style='font-family:Symbol;mso-fareast-font-family:"Times New Roman";color:#CCDAFF'>X</span><span
+        style='mso-fareast-font-family:"Times New Roman";color:#CCDAFF'>Swap Solution</span><span style='mso-fareast-font-family:"Times New Roman"'></span></h1>
+
+    &nbsp;
+
+    <p class=MsoNormal>OracleSwap minimizes costs and
+      aligns incentives in the following ways:</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>The only way a user
+        can cheat is via a fraudulent oracle price creating a fraudulent PNL at weekly
+        settlement. If a player sees a bogus oracle-reported price, they can and
+        rationally should burn their PNL debit rather than send it to their
+        counterparty, presumably an oracle sock-puppet.<span class=MsoFootnoteReference> <a name="_ftnref11"></a><a href="#_ftn11"><span style='mso-bookmark:_ftnref11'><span style='color:#9FB8FF'>[11]</span></span><span
+              style='mso-bookmark:_ftnref11'></span></a></span><span style='mso-bookmark:
+_ftnref11'></span> A cheated player is incented to burn their debit when
+        cheated, trivializing the exit scam payoff. Comparing an exit scam payoff
+        versus the lost annuity of future oracle fees&#8212;even without the burn
+        mechanism&#8212;shows that honesty is the oracle's dominant strategy.</span><a name="_ftnref12"></a><a href="#_ftn12"><span style='mso-bookmark:_ftnref12'><span class=MsoFootnoteReference><span style='font-size:12.0pt;line-height:105%;
+color:#9FB8FF'>[12]</span></span></span><span style='mso-bookmark:_ftnref12'></span></a><span style='mso-bookmark:_ftnref12'></span><span style='color:#9FB8FF'> </p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Market-on-close
+        prices supplied by the oracle eliminates latency problems, minimizes execution
+        costs, and simplifies trading. Fill prices are taken from the oracle contract
+        and reference the next business day close, and at weekly settlement the oracle
+        generates a PNL factor for each potential start and end day that is applied to
+        a position. Users do not need specialized hardware or software, as latency is
+        not advantageous. </p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>LPs set their own closing
+        fees and funding rates, though they are fixed for the life of any particular
+        position. Funding rate differences between long and short positions allow them
+        to balance their long/short exposure. Each LP gets portfolio margining, netting
+        long and short positions. Economies of scale&#8212;as opposed to delusional token
+        price expectations&#8212;encourage LPs to invest early.</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>If the oracle or an LP
+        disappears, players can recover their funds via a time-lock function.</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Players have 24
+        hours to cure their positions at weekly settlement. The LP must settle their
+        book between 24 and 48 hours after the oracle settlement update. Forced
+        liquidations are avoided by capping weekly PNL at the Required Margin (RM),
+        which eliminates the need to monitor the market between weekly Friday
+        settlements. </p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>The LPs and oracle
+        are paid explicitly, which is cheaper than 'free.'</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>All code is open
+        source, including a downloadable web front-end and code that updates the
+        oracle contract.</p>
+
+    &nbsp;
+
+    <h2><a name="_Toc27044353"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>3.1 Use cases</span></a><span style='mso-bookmark:_Toc27044353'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    <p class=MsoNormal><b><span style='color:#9FB8FF'>&nbsp;</span></b></p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Easier, cheaper, and more transparent for investors.</span></b><span style='color:#9FB8FF'> All one needs is access to the blockchain and ETH. With
+        market-on-close trade execution and no forced liquidations, one merely attends
+        to the contract once a week to sustain a long-term position. Payoffs are formulated
+        to generate a payoff that generates a linear USD return as a function
+        of the USD price change, allowing investors to
+        avoid the convexity risk in the BitMEX ETH perpetual swap. OracleSwap
+        removes the costs involved in moving between ETH, BTC, wrapped ETH, tokens,
+        stable coins, stocks, and USD: fees, time, crossing the spread. Transaction
+        prices are the same regardless of size, side, LP or investor. </p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Diversification</span></b><span style='color:#CCDAFF;
+mso-themecolor:accent2;mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;
+mso-style-textfill-fill-themecolor:accent2;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:"lumm=20000 lumo=80000"'>.</span><span style='color:#9FB8FF'> There are many reasons people may not want to sell their
+        ETH or BTC, yet diversification is the only free lunch in economics. Anyone
+        with a significant amount of their wealth in BTC or ETH would be wise to
+        allocate some of this capital to other assets. Those in countries that make it
+        hard to access the world's largest equity market can find the SPX valuable
+        diversification as well.</p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Leveraging ETH or BTC</span></b><span style='color:#CCDAFF;mso-themecolor:accent2;mso-themetint:51;mso-style-textfill-fill-color:
+#CCDAFF;mso-style-textfill-fill-themecolor:accent2;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:"lumm=20000 lumo=80000"'>.</span><span style='color:#9FB8FF'> OracleSwap provides a convenient way to increase one's
+        crypto exposure by offering 2.5:1 leverage for ETH and BTC. Thus with 10 ETH,
+        one can fund an additional 25 ETH notional long position or go short and
+        generate a net short 15 ETH position. In contrast, MakerDAO would only allow
+        you to buy 6 more ETH, and there would be extra costs involved in buying ETH
+        with Dai and then buying back Dai.</p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Hedging</span></b><span style='color:#CCDAFF;
+mso-themecolor:accent2;mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;
+mso-style-textfill-fill-themecolor:accent2;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:"lumm=20000 lumo=80000"'>.</span><span style='color:#9FB8FF'> With OracleSwap, one can eliminate their ETH portfolio's
+        USD volatility while staying on the blockchain. As in many things, we get most
+        of the benefits with a fraction of the effort needed for a perfect hedge (which
+        would involve weekly transactions). For example, assuming ETH has an annualized
+        volatility of 100%, one could reduce their net ETH's USD volatility by 85%
+        while requiring an average of just one trade every 3 months. The Technical
+        Appendix and the excel spreadsheet generate a more detailed example.</p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Attractive ROE for Liquidity Providers (LPs)</span></b><span style='color:#CCDAFF;mso-themecolor:accent2;mso-themetint:51;mso-style-textfill-fill-color:
+#CCDAFF;mso-style-textfill-fill-themecolor:accent2;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:"lumm=20000 lumo=80000"'>. </span><span style='color:#9FB8FF'>Attractive investor fees are consistent with attractive
+        returns for an LP. The marginal risk for ETH whales generated by being an LP
+        comes from random net exposure as long or short investors arrive. An LP setting
+        their funding rate to equilibrate long and short demand will accumulate random
+        positions, which are uncorrelated with a long ETH position (e.g., the average
+        correlation to an ETH portfolio of a sequence of exposures symmetrically
+        distributed around zero, is zero). The net effect of cross-margining and the
+        statistics of adding uncorrelated exposure generates Sharpe ratios above 2.0
+        over a variety of assumptions. </p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Extensions</span><span style='color:#9FB8FF'>:</span></b></p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Atomic Swaps</span><span style='color:#9FB8FF'>. </span></b><span style='color:#9FB8FF'>A reliable oracle would facilitate atomic swaps using ETH
+        margining to bond transactors. A failure by either party to transact at the
+        forward price within 24 hours would presume the <i>ex-post</i> loser, defined
+        by the subsequent ETH and BTC prices, was at
+        fault, and burn their margin while releasing the other party's margin, and also
+        generate an event log allowing others to assess whether the oracle was being
+        truthful. </p>
+
+    <p class=MsoNormal><b><span style='color:#CCDAFF;mso-themecolor:accent2;
+mso-themetint:51;mso-style-textfill-fill-color:#CCDAFF;mso-style-textfill-fill-themecolor:
+accent2;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+"lumm=20000 lumo=80000"'>Sports Books</span></b><span style='color:#9FB8FF'>: A
+        book could set betting lines using some objective survey of the major betting
+        sites and use the line just before a game as the price for a binary payoff. It
+        would generate a consistent, concise set of events that would be easy to audit
+        and lend itself to a repeatable game.</p>
+
+    <h1><a name="_Toc27044354"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4 Contract Specs</span></a><span style='mso-bookmark:_Toc27044354'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h1>
+
+    &nbsp;
+
+    <h2><a name="_Toc27044355"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.1 Margin, Notional, and PNL</span></a><span style='mso-bookmark:
+_Toc27044355'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>A subcontract is a bilateral
+      agreement between a Liquidity Provider (<b>LP</b>) and Investor for a
+      particular asset (e.g., SPX). It has a constant <i>Required Margin </i>(<b>RM</b>),
+      which is implies a notional amount via the <i>Leverage Ratio </i>and the
+      ETH price.<a name="_ftnref13"></a><a href="#_ftn13"><span style='mso-bookmark:
+_ftnref13'><span class=MsoFootnoteReference><span style='font-size:11.0pt;
+line-height:105%;color:#9FB8FF'>[13]</span></span></span><span style='mso-bookmark:_ftnref13'></span></a><span style='mso-bookmark:_ftnref13'></span>
+    </p>
+
+    <p class=MsoNormal>Unlike many crypto exchanges
+      where investors choose notional amounts and then their leverage (e.g., 2x, 5x),
+      which determines their margin, in OracleSwap the required margin defines the
+      position. This then implies an ETH notional amount, which then implies a USD
+      notional amount via a changing ETH price. The leverage ratio is set so that the
+      RM covers a 3-standard deviation PNL in the notional, indicating one should
+      expect the next settlement to create a debit or credit of one-third of their
+      RM. The initial investor margin of 1.5RM is a simple way to make sure investors are
+      prepared, as OracleSwap is designed for long-term investors, an investor should
+      be prepared for a couple of adverse settlements.</p>
+
+    <p class=MsoNormal>Those desiring lower leverage
+      can overfund their margin without changing their position exposure, as the RM
+      determines the notional exposure, not the total ETH in an investor or LP's
+      margin. The player's risk is also not affected by their actual/total margin
+      ETH, as the RM caps their maximum liability, via market risk
+      or fraud (the fraud attack would be via prices to PNL, which is
+      capped at the RM).</p>
+
+    <p class=MsoNormal>The weekly cash flow, the PNL
+      (for <b>P</b>rofit a<b>N</b>d <b>L</b>oss), is the amount debited from one
+      counterparty and credited to the other. For example, in going long BTC,
+      implicitly, the trade is as follows: at open buy USD with ETH and then buy BTC
+      with USD, at close sell BTC for USD and then sell USD for ETH. This sequence is
+      like when a US investor invests in a Japanese stock: she needs first to buy yen
+      to buy the stock, and eventually sell the stock for yen, which she sells for
+      USD. The contract does not do each of those transactions, but it prices them
+      all to generate the weekly PNL, which perforce is in ETH. </p>
+
+    <p class=MsoNormal>This USD adjustment is made
+      because users care mainly in the USD returns of their investments. If there
+      were no adjustments for the USD price of ETH, as in the BitMEX BTCETH perpetual
+      swap, to prevent arbitrage one must account for the ETH correlation with the
+      asset and put this term into the funding rate. Given the high correlation
+      between the ETH and BTC, as well as between the ETH and itself, this term is
+      generally larger than any reasonable asset expected return (i.e., &gt; 50%
+      annualized). While short term traders may not mind (over 8 hours it is
+      seemingly insignificant), this is an intolerable risk for long term investors
+      merely interested in an asset's USD return. </p>
+
+    <p class=MsoNormal align=center style='text-align:center'><span style='color:#9FB8FF'>PNL(long, investor) = RM&#8729;LevRatio&#8729;ETH<sub>0</sub>&#8729;{(P<sub>1</sub>/P<sub>0</sub> &#8210;
+        1) &#8210; FundRateLong}/ETH<sub>1</sub></p>
+
+    <p class=MsoNormal>As each subcontract implies
+      symmetric PNLs to its counterparties, investor and LP, we need only calculate
+      the PNL for one party: <i>PNL<sup>investor</sup>= &#8210; PNL<sup>LP</sup></i>.
+      At settlement every counterparty within an LP's book is credited or debited per
+      their PNL, which does not change the book's total balance via the equality. </p>
+
+    <p class=MsoNormal><b><span style='color:#9FB8FF'>Example:</span></b></p>
+
+    <div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in'>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;background:
+#423E3E'><span style='color:#9FB8FF'>RM=10 ETH, Leverage Ratio=2.5, Funding
+          Rate =0.2%, Taker long, Asset BTC.</p>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;background:
+#423E3E'><span style='color:#9FB8FF'>Start prices: ETH=$145, BTC=$5800. End
+          prices: ETH=$155, BTC=$5600</p>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
+.5in;background:#423E3E'><span style='color:#9FB8FF'>PNL(long, investor)=10&#8729;2.5&#8729;
+145&#8729;{(5600/5800 &#8210; 1) &#8210; 0.002}/155 </p>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;background:
+#423E3E'><span style='color:#9FB8FF'>Taker PNL = - 0.853 </span><span style='font-family:Symbol;color:#9FB8FF'>X</span><span style='color:#9FB8FF'> =
+        </span><span style='font-family:Symbol;color:#9FB8FF'>-</span><span style='color:#9FB8FF'> LP PNL </p>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;background:
+#423E3E'><span style='color:#9FB8FF'>USD Notional at start of period= $3625=10&#8729;2.5&#8729;145</p>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;background:
+#423E3E'><span style='color:#9FB8FF'>BTC USD Return= - 3.45%</p>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;background:
+#423E3E'><span style='color:#9FB8FF'>Taker Return on USD Notional= - 3.65% = -
+          0.853/3625</p>
+
+      <p class=MsoNormal style='background:#423E3E'><span style='color:#9FB8FF'>Note
+          that the difference in the asset return and the contract return is 0.2%, the
+          Funding Rate. </span><a name="_Toc27044356"></a></p>
+
+    </div>
+
+    &nbsp;
+
+    <h2><span style='mso-fareast-font-family:"Times New Roman";color:#CCDAFF'>4.2
+        The Effect of the PNL Collar</span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>PNL is capped at the RM so each player
+      is assured their counterparty can cover any potential liability. The PNL caps
+      make a long position like a long in the underlying plus a portfolio containing
+      a long put/short call that creates a <i>collar position</i>. The value of this
+      option portfolio is dependent on whether the cost of the call minus the put is
+      significantly different from zero. </p>
+
+    <p class=MsoNormal>Unlike most collars, this one
+      has extreme out-of-the-money options. Leverage ratios (LRs) are set so that the
+      margin covers 99.5% of weekly outcomes. Simulating contract PNL
+      using actual data since 2016, only 4 out of 573 weeks generated a PNL capped by
+      the RM, 0.6% of the observations. The outliers were for the ETH contract: twice
+      in early 2017 when ETH doubled in value, and at the beginning of 2018 when ETH
+      fell by one-third. While the SPX margin in this period seems, if anything, overly
+      conservative, this period was one of below-average volatility. Using weekly
+      data back to 1986, and with assumptions about ETH volatility, a 10% margin
+      (i.e., 10x leverage) generated an insignificant number of violations.
+    </p>
+
+    <p class=MsoNormal align=center style='text-align:center'><b><span style='color:#9FB8FF'>PNL Simulations</span></b></p>
+
+    <p class=MsoNormal align=center style='margin-top:0in;margin-right:1.0in;
+margin-bottom:8.0pt;margin-left:1.0in;text-align:center'><span style='font-size:10.0pt;line-height:105%;color:#9FB8FF'>Weekly data from March
+        2016 through October 2019. All contracts have RM=100 ETH. PNL here is in ETH,
+        not USD, as the RM cap applies to ETH.</p>
+
+    <p class=MsoNormal align=center style='text-align:center'><span style='color:#9FB8FF;mso-no-proof:yes'><img border=0 width=378 height=227 id="_x0000_i1031" src="WPfiles/image001.png"></p>
+
+    <p class=MsoNormal>To better estimate the effects
+      of the RM cap, we ran simulations assuming 100% annualized crypto volatility
+      and correlations of 0.9. These generated economically irrelevant net effects,
+      in that the annualized value is less than 0.4% annualized. To the degree
+      participants wish to value the PNL caps and put this into the negotiation
+      between long and short, it belongs in the basis. Funding rates on most
+      exchanges are orders of magnitude higher than 0.4% annually, implying the value
+      of the PNL cap is economically irrelevant relative to other issues influencing
+      supply and demand for long and short positions.</p>
+
+    <h2><a name="_Toc27044357"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.3 Funding Rates</span></a><span style='mso-bookmark:_Toc27044357'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    <p class=MsoNormal style='text-align:justify'><span style='color:#9FB8FF'>&nbsp;</p>
+
+    <p class=MsoNormal style='text-align:justify'><span style='color:#9FB8FF'>Liquidity
+        Providers in most markets are paid via the bid-ask spread.
+        OracleSwap has no trading at maker-supplied prices, so our makers, the LPs,
+        must be paid differently. Part of their revenue will come from the <i>funding
+          rate</i> investors pay (the other part, a closing fee). LPs choose the funding
+        rates their long and short investors pay and can change them at any time;
+        however, any subcontract uses the funding rate at trade instantiation for its
+        duration. </p>
+
+    <p class=MsoNormal style='text-align:justify'><span style='color:#9FB8FF'>It is
+        important to note it consists of two components, the rate to compensate the LP,
+        and the basis rate to equilibrate long and short investor demand. </p>
+
+    <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center;line-height:normal'><i><span style='color:#9FB8FF'>FundingRate<sub>Long</sub>
+          = LP<sub>fee</sub> + Basis</span></i></p>
+
+    <p class=MsoListParagraph align=center style='margin-left:0in;text-align:center;
+line-height:normal'><i><span style='color:#9FB8FF'>FundingRate<sub>Short</sub>
+          = LP<sub>fee</sub> &#8210; Basis</span></i></p>
+
+    <p class=MsoNormal>A swap referencing a cash price
+      must adjust for the <i>basis</i> one sees in futures/forward market curves. The
+      basis accounts for the opportunity cost of money (e.g., interest rates), and
+      the costs and benefits of owning the asset outside of its price appreciation
+      (e.g., storage costs, dividends). If there were no basis, one could invest cash
+      in money markets, go long a futures position, and make the same return as
+      investing in the asset plus the interest rate earned in money markets, which is
+      not an equilibrium.<a name="_ftnref14"></a><a href="#_ftn14"><span style='mso-bookmark:_ftnref14'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[14]</span></span></span><span
+          style='mso-bookmark:_ftnref14'></span></a><span style='mso-bookmark:_ftnref14'></span>
+      A basis is charged symmetrically, subtracting from the long return and adding
+      to the short. The LP will implicitly set a basis when setting different funding
+      rates for long and short takers to equilibrate their exposure.</p>
+
+    <p class=MsoNormal>While it is useful for investors to
+      understand the effects of interest rates and other factors on the basis,
+      ultimately, this differential is determined by supply and demand. OracleSwap's
+      funding rates are capped in absolute value at 1% per week for ETH and BTC, and
+      0.25% for SPX (1-week return standard deviations are about 10% and 3%,
+      respectively)</p>
+
+    <h2><a name="_Toc27044358"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.4 Settlement</span></a><span style='mso-bookmark:_Toc27044358'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>LPs settle their books in the
+      period 24 to 48 hours after the Friday oracle price update. This delay
+      gives everyone 24 hours to cure their margins and avoid default if they have
+      not already canceled. The LP settlement takes one
+      function for books with less than 200 subcontracts, but above a certain point a
+      book must be settled in parts. This allows for efficient scalability. An LP should read the
+      Technical Appendix for more detail.</p>
+
+    <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in'><span style='color:#9FB8FF'>For an investor, only a
+        negative PNL can create a situation where a player's currently adequate margin
+        will be deficient if not cured at settlement, but a negative PNL does not
+        necessarily imply an inadequate subsequent margin. For example, if an
+        investor's RM=10 and they have 11 in their margin, an impending PNL indicating
+        a loss of 2 ETH implies they need to add at least 1 ETH to their margin at settlement
+        to avoid default. </p>
+
+    <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in'><span style='color:#9FB8FF'>For an LP margin adequacy
+        is more nuanced, in that they could have a situation where a cancel increases
+        their net RM, implying a margin cure is needed even if the LP's net PNL was 0.
+        For example, if long and short 10 ETH (<i>aka</i> flat), and the long canceled or defaulted,
+        their RM will rise from zero to 10 ETH. They must monitor their book to anticipate
+        cancellations and defaults at the impending weekend settlement. LP economics
+        are best for someone who is complimenting a natural long position, so an LP
+        should have considerable excess margin available, whether in their margin
+        or off the contract. </p>
+
+    <h2><a name="_Toc27044359"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.5 Default</span></a><span style='mso-bookmark:_Toc27044359'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>At weekly settlement, if the PNL
+      takes a player's margin below their RM, they are in default, and the
+      subcontract is terminated immediately. A default does not cost the
+      non-defaulting counterparty anything, as this just means the defaulter was
+      unprepared for the next week, not that it did not have enough to pay their
+      debit that week. Defaults are only due to negligence, as by Friday morning one
+      has a good estimate of their impending PNL and the ability to cancel if they
+      suspect they cannot cure their margin by settlement; after Friday 4 PM, players
+      will know their PNL with certainty and have at least 24 hours to cure their
+      margin. </p>
+
+    <p class=MsoNormal>An LP that fails to run their book's
+      settlement function within 48 hours after the oracle settlement update can be put
+      into default. The first investor to run the 'inactiveLP' function gets the LP's
+      default fee, and all investors can then redeem their subcontracts and withdraw
+      their ETH. If an LP defaults by not having enough margin to cover her required
+      margin, all her subcontracts are canceled at that settlement, and the book cannot
+      accept new investors.</p>
+
+    <p class=MsoNormal>If a player has less than &frac12;&#8729;RM
+      in their margin at default (e.g., they have 1.4 ETH in the margin of a subcontract
+        with an RM=1.0
+      ETH, and lose 1.0 ETH), the default payment is the maximum of &frac12;&#8729;RM and whatever
+      is there. The fact the oracle gets the default fee should motivate the LP to
+      burn instead of default in the case where the LP thinks they were cheated via
+      fraudulent prices. A burn would prevent an evil oracle from receiving both the
+      LP's PNL debit <i>and</i> the default fee. </p>
+
+    <h2><a name="_Toc27044360"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.6 Becoming a Liquidity Provider</span></a><span style='mso-fareast-font-family:"Times New Roman";color:#CCDAFF'> </span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>To become an LP one posts the
+      following single Ethereum transaction:</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Choose asset: SPX,
+        ETH, BTC</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>State a minimum RM
+        for investors </p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Set long and short
+        funding rates, closing fee</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Post ETH margin &ge; 10x their minimum RM</p>
+
+    <p class=MsoNormal>Any amounts taken by an investor
+      are locked in until the next settlement. At any time, the LP can withdraw
+      whatever margin has not been attributed to their Required Margin by an
+      investor. At each settlement the LP's active positions are netted for calculating the
+      LP's RM within any AssetSwap contract (an LP can use the same address for BTC
+      and SPX contracts, but these would be independent books, with no
+      cross-margining across different assets). </p>
+
+    <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in'><span style='color:#9FB8FF'>LPs should read the
+        OracleSwap Technical document for further information on how to manage their
+        books. LPs are responsible for settlement of their books as failure to settle
+        will allow any investor to receive a penalty payment from the LP as an
+        incentive and put the book into default allowing everyone within that LP's book
+        to redeem their margins immediately. Anyone can settle the book&#8212;there is no
+        risk to doing this, but it does generate a gas fee for the executor&#8212;so an
+        investor who sees the LP not completing the weekly settlement can simply
+        do it themselves. </p>
+
+    <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in'><span style='color:#9FB8FF'>As LPs choose their closing and
+funding rates, it may be that certain investors prefer low closing fees and high funding
+ rates, while others the reverse. LPs can also differentiate based on their minimum
+ position size.</p>
+
+    <p class=MsoNormal>There are economies of scale in
+      being an LP. The time needed to tend the position is basically fixed regardless
+      of LP size. However, processing 250 investors in one LP uses less gas than if
+      there were 10 investors across 25 LPs since each LP settles their own book
+      independently. Further, the more investors one has, the greater the likelihood
+      the individual book will be flat due to the law of large numbers, and the greater
+      the ratio of total notional exposure to net exposure. This incents those who
+      are LPs to become larger than average, which brings down costs, and via
+      competition will ultimately lead to lower funding rates and closing fees. </p>
+
+    <p class=MsoNormal><a name="_Hlk13494273"><span style='color:#9FB8FF'>LPs are
+          protected from getting too one-sided via a restriction on new positions, in
+          that investors cannot take positions that push an LP's book beyond 50% of her
+          total margin. </span></a><span style='color:#9FB8FF'>This restriction allows
+        investors to always bring a book back towards being 'flat' (i.e., Long=Short)
+        but prevents increases in net position from using up the LP's available RM.
+        Thus, an initial allocation of 100 ETH may incent only long positions, but they
+        are stopped out at 50 ETH.</p>
+
+
+      <p class=MsoNormal><a name="_Hlk13494273"><span style='color:#9FB8FF'>Lastly, there
+      is a managed account contract hat enables an investor to delegate LP administrative
+      duties&#8212;setting fees, curing margin, adjusting minimum size requirement&#8212;while
+      preventing the manager from sending ETH to anywhere but the AssetSwap contract,
+      which can only send its money back to the address that created its position.
+      The investor has sole ability to withdraw funds from the contract. Many brokerage
+       accounts have this capability, where the manager can buy and sell stocks on
+       an exchange, but they cannot withdraw cash. It has a built-in mechanism to
+       apportion a manager fee as a percent of assets under management, and protects
+       the manager's accrued fee as well.
+    </p>
+
+    <h2><a name="_Toc27044361"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.7 Taking a Position</span></a><span style='mso-bookmark:_Toc27044361'></span><span style='mso-fareast-font-family:"Times New Roman";color:windowtext'> </span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>To take a position, one does the
+      following in a single transaction:</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Take a side, long or
+        short</p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Set the RM for the
+        subcontract. </p>
+
+    <p class=MsoListParagraph style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+8.0pt;margin-left:45.0pt;text-indent:-.25in;mso-list:l0 level1 lfo2'>
+      <![if !supportLists]><span style='mso-fareast-font-family:"Times New Roman";color:#D9E2F3;mso-themecolor:
+accent1;mso-themetint:51'><span style='mso-list:Ignore'>&#8226;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span></span></span>
+      <![endif]><span style='color:#9FB8FF'>Send ETH &#8805; 1.5RM
+    </p>
+
+    <p class=MsoNormal>When an investor takes a
+      position, the counterparties are committed to a swap from the next business day
+      close to the subsequent settlement. The initial margin is set 50% higher than
+      the maintenance margin because investors should realize there is a 50% chance
+      they will lose money at the first settlement. As a PNL standard deviation is
+      about one-third of the RM, investors should have some excess margin available
+      if they expect to invest for multiple weeks, and the initial requirement
+      reminds them of this.</p>
+
+    <p class=MsoNormal>In the event of an LP closing
+      the subcontract, that investor can replace the position at no cost because only
+      the initiator of a close pays the close fee, and there is no open fee. </p>
+
+    <p class=MsoNormal>A subcontract uses the
+      subsequent oracle-reported closing prices as its starting price. These are
+      taken on New York Stock Exchange (NYSE) business days at 4 PM.<a name="_ftnref17"></a><a href="#_ftn17"><span style='mso-bookmark:_ftnref17'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;
+color:#9FB8FF'>[17]</span></span></span><span style='mso-bookmark:_ftnref17'></span></a><span style='mso-bookmark:_ftnref17'></span> For example, a contract taken Monday at
+      3 PM will have its initial fill price taken on Monday close; a contract taken
+      Monday at 6 PM will have its first price use the Tuesday close. </p>
+
+    <p class=MsoNormal>Investors cannot take during the
+      4:00 to 5:00 PM hour. This restriction prevents gaming the latency between the
+      4 PM prices and when those prices are reported to the oracle. Takes also cannot
+      occur in the settlement period, between the Friday oracle price update and the LP
+      settlement that occurs between 24 and 48 hours after the Friday oracle
+      settlement update. This makes it easier for LPs to determine their net required
+      margin when settlement is executed. </p>
+
+    <p class=MsoNormal>For any subcontract (aka
+      position), after the first week, all subsequent PNL-relevant pricings use
+      Friday closings. Investors and LPs can fund their margins at any time. They can
+      withdraw Excess Margin at any time except the Settlement Period, encouraging players
+      to burn a debit PNL rather than subject themselves to another settlement with
+      an evil oracle, which encourages oracle honesty.</p>
+
+    <h2><a name="_Toc27044362"></a><a name="_Hlk16083180"></a><span style='mso-bookmark:_Toc27044362'><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.8 Closing a Position</span></span><span style='mso-bookmark:
+_Toc27044362'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>A standard cancel before the
+      Friday oracle contract update terminates the subcontract at the subsequent
+      settlement. After book settlement, the investor of a canceled contract must
+      redeem their position to move their entire margin from the LP's book contract
+      to the AssetSwap contract, where they can then withdraw it to their personal
+      address. This two-step process protects user funds, and also saves on gas in
+      the weekly book settlement. Investors can cancel using intraweek prices (e.g.,
+      Monday), though the LP must have sufficient excess margin. Canceling intraweek
+      still requires waiting until the weekly settlement to retrieve their funds, and
+      they pays the maximum LP closing fee.</p>
+
+    <p class=MsoNormal>Investors cannot cancel in their
+      first week. This is because new subcontracts are processed differently in the
+      settlement, and also because we want to encourage long-term investors. LP's can
+      unilaterally cancel all their subcontracts and close their book with a
+      28-day notice, allowing all takers to exit at the first settlement after
+      this date is toggled at no cost. This feature is available because canceling
+      hundreds of positions individually would be daunting, and 4 weeks is sufficient
+      time for investors to find new LPs.</p>
+
+    <p class=MsoNormal>ETH left in a player's margin or
+      the AssetSwap contract is there permanently until the user withdraws it, as
+      there is no self-destruct or other mechanism that can freeze accounts.
+      Withdrawal of excess margin, like redemptions, take two steps: one withdraws
+      ETH to the AssetSwap contract, then from the AssetSwap contract to the ETH
+      account addressed used to fund the initial position. </p>
+
+    <h2><a name="_Toc27044363"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.9</span></a><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'> Oracle Duties and Monitoring</span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>The oracle has one
+      responsibility: Update prices to the oracle contract between 4 and 5 PM
+      on NYSE business days</span><a name="_ftnref18"></a><a href="#_ftn18"><span style='mso-bookmark:_ftnref18'><span class=MsoFootnoteReference><span style='color:#9FB8FF'>[18]</span></span></span><span
+          style='mso-bookmark:_ftnref18'></span></a><span style='mso-bookmark:_ftnref18'></span><span style='color:#9FB8FF'> This set of at most 5 weekly prices (plus the last price in
+            the prior week) is its only ability to affect player margins, via prices affecting
+            the PNL applied at settlement. When a trade is made the AssetSwap contract pulls
+             the current day in the Oracle contract to determine its start or end pricing day,
+             and so this simple array of prices is sufficient to administer the OracleSwap 
+             contracts. The contract return is calculated on the oracle contract using the
+              relevant prices and leverage ratios, and at settlement is pushed to the AssetSwap
+              contracts. This vector of returns is then used in the weekly settlement. OracleSwap's
+               oracle will usually update the oracle around 4:15 PM, but network traffic and
+               occasional testing of its backup servers may generate some variability.  </p>
+
+        <p class=MsoNormal>We target a couple-minute window slightly after
+        4 PM for sampling market prices, as this is the close of US equity markets,
+        a good benchmark for the 'end of day.' The data are pulled&#8212;directly and
+        indirectly&#8212;from several Bitwise-approved exchanges in a couple-minute
+        window around this time</span><a name="_ftnref19"></a><a href="#_ftn19"><span style='mso-bookmark:_ftnref19'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;
+color:#9FB8FF'>[19]</span></span></span><span style='mso-bookmark:_ftnref19'></span></a><span style='mso-bookmark:_ftnref19'></span><span style='color:#9FB8FF'> Anyone
+        auditing the oracle should be aware that historical crypto databases use
+        different intraday closing times. The Winkdex index records 4 PM prices for ETH
+        and BTC and so, currently at least, provides a useful reference for ETH and BTC
+        prices. The median price from several exchanges, sampled at intervals that can vary
+        up to 5 minutes, generates a standard error relative to a 'true' price. This
+        variability would be fatal for a real-time system, but for long term investors,
+        where neither side to a transaction has a latency advantage, such imprecision
+        is both unbiased and immaterial for long-term investors.</p>
+
+    <p class=MsoNormal>In a worst-case scenario where the oracle does not
+      update prices&#8212;which would
+      prevent settlement&#8212;all players can withdraw their entire margin if the
+      contract has not been settled for ten days. An inactive oracle would also
+      prevent anyone from using the contracts, in that settlements could never
+      happen, and users could withdraw any money accidentally sent to the contract..</p>
+
+    <p class=MsoNormal>The negligible processing and data storage requirements
+    imply an oracle with a very light footprint. The oracle's main job is to
+    automate scripts that pull data, and as these are not real-time prices, one
+    does not have to pay for low-latency data feeds, but rather can use stale
+    data (5 to 15 minutes old) that is uncensorable. Data problems are mitigated
+    by using a variety of sources, targeting different minute windows, and computers
+    in different geographic regions, but the total cost is trivial in that you can
+     buy server space for only $10 a month, and the software needed to run data
+     scraping programs are open source. </p>
+
+    <p class=MsoNormal>A fraudulent price should elicit
+      a burn, and as burns are costly, they show someone cared enough to pay to punish
+      the oracle. A truly fraudulent price report by
+      the oracle should discourage any future players, but as such allegations are
+      uncensorable, further investigation is recommended as the burner could be
+      mistaken or mischievous. </p>
+
+    <h2><a name="_Toc27044364"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.10 Fees</span></a><span style='mso-bookmark:_Toc27044364'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal><b><span style='color:#9FB8FF'>Open fee</span></b><span style='color:#9FB8FF'>: 0%. </p>
+
+    <p class=MsoNormal>There is no open fee. Further,
+      there is no bid-ask spread. It is useful to remember this because even though
+      some exchanges charge only a close fee, there is always the cost of the bid-ask
+      spread, and if one has a large position, trade impact. These non-explicit costs
+      are present on both sides of a trade on almost every exchange other than
+      OracleSwap. </p>
+
+    <p class=MsoNormal><b><span style='color:#9FB8FF'>Close fee</span></b><span style='color:#9FB8FF'>: 1.0-2.0% notional for crypto, 0.25-0.50% for SPX.</p>
+
+    <p class=MsoNormal>The close fee is set at trade
+      instantiation based on the closing fee listed at the time of trade in the LP's
+      book. The close fee consists of a fixed oracle fee and a variable LP fee. The
+      oracle fee is 1.0% of notional for ETH and BTC positions, and 0.25% for SPX
+      positions. The LP can set their closing fee anywhere from 0% to 1.00% for
+      cryptos, 0% to 0.25% for the SPX, which is then added to the oracle's fee to
+      generate a total closing fee. An investor canceling their position pays this
+      directly when executing a cancel, not through a deduction of their margin.
+    </p>
+
+    <p class=MsoNormal>If the LP cancels, they pay 2
+      times the base oracle rate, which then goes entirely to the oracle. For
+      intraweek cancels, those that apply a closing price before the settlement
+      day, investors pay the LP maximum closing rate regardless of their subcontract's
+      initial closing fee. This premium is to compensate the LP for the impact on
+      her Required Margin. LPs cannot cancel intraweek. Thus LP cancels, and intraweek
+      investor cancels, pay a total close fee of 2.0% for crypto, 0.5% for SPX.</p>
+
+    <p class=MsoNormal><b><span style='color:#9FB8FF'>Funding Rate</span></b><span style='color:#9FB8FF'>: -1% to 1% weekly for crypto, -0.25% to 0.25% weekly for
+        SPX.</p>
+
+    <p class=MsoNormal>These are purely market-driven
+      rates, as LPs set these rates to balance their books and compete for investors.
+      Competition and scale should reduce their average size over time.
+      This rate is a composite of a rate for the LP's service and a basis rate that
+      equilibrates supply and demand. As the basis is a symmetric charge from long to
+      short, the funding rate could be negative (implying, a credit for the
+      investor). Any subcontract has a fixed funding rate for its duration. It is
+      transferred to the LP via the PNL calculation at weekly settlement.</p>
+
+    <p class=MsoNormal><b><span style='color:#9FB8FF'>Default fee: </span></b><span style='color:#9FB8FF'>&frac12;&#8729;RM.</p>
+
+    <p class=MsoNormal>If a player defaults, they are
+      charged 50% of their RM. Players can never
+      withdraw margin below their RM, so a default can only occur at the weekly
+      settlement. The default fee is sent to the oracle to make users more inclined
+      to burn rather than default, in that a cheating oracle would get the fraudulent
+      PNL and the default fee if not burned. As players have 24 hours to cure their
+      margin and should cancel before the Friday oracle update if they foresee an
+      inability to cure their margin, any default would be due to gross negligence. </p>
+
+    <p class=MsoNormal><b><span style='color:#9FB8FF'>Burn fee</span></b><span style='color:#9FB8FF'>: &frac12;&#8729;RM.</p>
+
+    <p class=MsoNormal>This fee should never be invoked
+      because the oracle is incented to be honest, and a dishonest oracle price is
+      the only rational reason for an investor to burn. However, a player who thinks
+      the oracle is cheating can pay a fee of 50% of
+      his RM to preclude his counterparty&#8212;presumably an agent of the oracle&#8212;from
+      receiving its PNL debit via fraudulent pricing. This fee is applied via a
+      payable function and is <b>effectively burned</b> to remove strategic
+      implications from some party that might game this system (the burn amount is
+      not credited to any user's margin, inaccessible). After the settlement at which
+      the burn is applied, the player margin is fully redeemable (i.e., instead of
+      being debited &frac12;&#8729;RM upon redemption in default, the user pays &frac12;&#8729;RM but then is
+      not debited at redemption).</span><a name="_ftnref20"></a><a href="#_ftn20"><span style='mso-bookmark:_ftnref20'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[20]</span></span></span><span
+          style='mso-bookmark:_ftnref20'></span></a><span style='mso-bookmark:_ftnref20'></span><span style='color:#9FB8FF'> </p>
+
+    <h2><a name="_Toc27044365"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>4.11 Contract Code</span></a><span style='mso-bookmark:_Toc27044365'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>OracleSwap consists of three Ethereum contracts: An Oracle,
+    AssetSwap, and Book contract. There are no libraries. The oracle contract (200
+      lines) warehouses the relevant price data and calculates the contract returns
+       at settlement, pushing the returns to the three AssetSwap contracts (ETH,
+         SPX and BTC). The AssetSwap contracts are identical, with about 400 lines
+         of code. They differ only in the prices and leverage used to generate the
+         returns. LPs then have separate Book contracts created from each AssetSwap
+         contract, that interact only through their specific AssetSwap contracts.
+         These book contracts are identical, and contain about 400 lines of code.
+         Security issues and code logic are addressed in the Technical Appendix.</p>
+
+    <p class=MsoNormal>We also provide the front-end
+      code used to access the Ethereum contracts on Github, so users can download
+      this to their PCs for both privacy, auditing, and as a basis for developing
+      their own OracleSwap-like contracts. There is also a python file that one can
+      use to update their own oracles, though we do not provide APIs or web-scrapers,
+      as we do not want anyone to know precisely how these work to prevent
+      countermeasures by data providers. There are many ways to pull data for free when
+      you do not need real-time data. </p>
+
+      <p class=MsoNormal>The managed account solidity files are templates that
+      can be customized as one wishes. This can facilitate use by giving large
+      ETH holders a mechanism for delegating a manager without worrying that the
+      manager would abscond with their funds. </p>
+
+    <h1><a name="_Toc27044366"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>5 The </span></a><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>Oracle's Incentives</span></h1>
+
+    &nbsp;
+
+    <p class=MsoNormal>The oracle owns a
+      non-transferable annuity of closing fees from OracleSwap contracts, and
+      comparing the value of this annuity to a potential cheat payoff shows the
+      oracle's dominant strategy is to be honest. Reducing the oracle to a single
+      agent makes this easier because this maximizes the percentage of fees going to
+      the oracle agent and makes accountability unambiguous. </p>
+
+    <p class=MsoNormal>Each AssetSwap contract is
+      hardcoded to the oracle contract, so this is the sole source of prices used in
+      generating subcontract payoffs throughout its life. The only attack vector
+      involves the oracle posting fraudulent prices, where an evil oracle is
+      conspiring with one of the counterparties, say by reporting an actual -3%
+      return as a +7% return, effectively stealing 10%. Presumably, a cunning evil
+      oracle would remove the middleman and be that counterparty using a different
+      account it controlled; an evil oracle in practice is an evil oracle/counterparty
+      sock-puppet. </p>
+
+    <p class=MsoNormal>The key to an honest oracle is
+      that it plays a repeated game where players can quickly and meaningfully react
+      to dishonest play.<a name="_ftnref21"></a><a href="#_ftn21"><span style='mso-bookmark:_ftnref21'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[21]</span></span></span><span
+          style='mso-bookmark:_ftnref21'></span></a><span style='mso-bookmark:_ftnref21'></span>
+      The oracle's incentive structure is like that in the iterated prisoner's
+      dilemma, where a multi-period game moves the dominant strategy from the
+      suboptimal equilibrium where both parties maximize their one-period payoff by
+      not cooperating, to the optimal equilibrium where parties maximize their
+      payoffs by cooperating<a href="about:blank" target="_blank"><span style='color:#9FB8FF'>.</span></a> In evolutionary biology, this shows up in <i>reciprocal
+        altruism</i> and illustrates how cooperation emerges out of long-run
+      self-interest, as cooperating players out-compete non-cooperators. </p>
+
+    <h2><a name="_Toc27044367"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>5.1 Cost-Benefit Analysis of an Oracle Cheat</span></a><span style='mso-bookmark:_Toc27044367'></span><a name="_Hlk16065806"></a><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>The game theoretic concept of <i>common
+        knowledge</i> is that two players both know some fact, they both know they both
+      know that fact, and both know they both know they both know the fact, <i>ad
+        infinitum</i>. Using this reasoning, most rational players will always burn
+      when cheated, where a burn means that the burner's PNL debit will not be paid
+      to the creditors.</span><a name="_ftnref22"></a><a href="#_ftn22"><span style='mso-bookmark:_ftnref22'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[22]</span></span></span><span
+          style='mso-bookmark:_ftnref22'></span></a><span style='mso-bookmark:_ftnref22'></span><span style='color:#9FB8FF'> While the reasoning is explained in full in the
+        Technical Appendix, the gist of why burning is the optimal response to a cheat
+        is the following.</p>
+
+    <p class=MsoNormal><a name="_Hlk16083194"><span style='color:#9FB8FF'>If the
+          oracle goes rogue and decides to cheat, a player who has not canceled must weigh the costs of
+          burning with the costs of continuing. If the cheated player continues, at the
+          subsequent settlement the evil oracle will rationally infer, via common
+          knowledge reasoning, he can cheat them again next period by at least the burn
+          fee, as the player revealed they are willing to tolerate such a sunk cost to
+          avoid paying this fee. Any player with margin balance, after the PNL attribution,
+          is between &frac12;&#8729;RM  and 1.0 RM will find burning and default cost the same,
+          but here burning has the benefit of preventing a cheating oracle from gaining
+          their ETH, and also prevent the oracle from receiving the default fee,
+          which makes it preferred for anyone who dislikes being cheated. Those with less
+          than &frac12;&#8729;RM in their margins
+          would find default cheaper than burning, though, whatever is in their margin
+          for the default fee, in addition to the fraudulent PNL, would go to the oracle,
+          which should motivate players to burn out of righteous spite.</span></a></p>
+
+    <p class=MsoNormal>As it is prudent to overfund
+      one's margin to save on gas and given the prevalence of overfunding margins by
+      300% on MakerDAO, we should expect most players to have an overfunded margin.
+      If users generally expose themselves to more risk in this way, it actually
+      lowers their risk collectively, in that it signals to the oracle that if he
+      goes rogue, he should expect all those accounts to burn, which then eliminates
+      the cheat payoff. </p>
+
+    <p class=MsoNormal>As all investors transact with
+      an LP, this makes the burn attribution nontrivial but straightforward. Burns
+      are allocated pro-rata against the other side: if burning parties represent 80% of the afflicted side, then each player on
+      their counterparty side party gets only 20% of their calculated PNL credited to
+      their margins.</span><a name="_ftnref23"></a><a href="#_ftn23"><span style='mso-bookmark:_ftnref23'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;color:#9FB8FF'>[23]</span></span></span><span
+          style='mso-bookmark:_ftnref23'></span></a><span style='mso-bookmark:_ftnref23'></span><span style='color:#9FB8FF'> </p>
+
+    <p class=MsoNormal>The burn fee must be high to
+      avoid griefing, and so the choice should require enough pain to prevent
+      frivolous burns harming innocent players. A burn generates an event log
+      highlighting the date of the fraudulent prices and should make it easy for
+      outsiders to assess, though a conscious choice to burn is costly and pointless
+      given an honest oracle. As it would be irrational for one to transact with an
+      oracle who has ever cheated, a true cheat should destroy future oracle revenue.
+      This is unlike many other oracles, where a cheater is presumed a rogue anomaly,
+      'punished' by having to create a new identity within the same oracle umbrella.</p>
+
+    <p class=MsoNormal>To generate a scheming oracle's
+      cost-benefit analysis, we compare the potential benefits of an exit scam with
+      the costs. The lost revenue comes from the expected closing fees of the
+      subcontracts. 1.0% of crypto notional and 0.25% of SPX notional translates to
+      2.5% of the RM given leverage. If we assume subcontracts roll over every two
+      months, and the oracle expects six closing fees, this implies the oracle
+      expects a 15.0% dividend on the gross RM in the AssetSwap contracts. Using the
+      Gordon dividend discount model, a discount rate of 10% and a growth rate of 5%
+      imply a present value of 3RM<sub>gross</sub>, where RM<sub>gross</sub> is the
+      total amount of RM across all the OracleSwap AssetContracts and their LPs.</span><a name="_ftnref24"></a><a href="#_ftn24"><span style='mso-bookmark:_ftnref24'><span class=MsoFootnoteReference><span style='font-size:11.0pt;line-height:105%;
+color:#9FB8FF'>[24]</span></span></span><span style='mso-bookmark:_ftnref24'></span></a><span style='mso-bookmark:_ftnref24'></p>
+
+    <p class=MsoNormal>The positions in the oracle's
+      scam would probably be less than one-fourth of the outstanding positions, in
+      that the contract would have to be somewhat popular to generate enough users to
+      generate a valuable payoff.
+      That is, if Oracle/Alice were 100% of one side, this would imply few users. This suggests
+      the maximum RM aligned with the evil oracle would be at most around 0.25*RM<sub>gross</sub>.
+      Given we should expect at least 50% to burn their PNL rather than continue,
+      this takes the scam payoff down to 0.125*RM.</p>
+
+    <p class=MsoNormal>Under very modest assumptions,
+      an amoral oracle would find it rational to use their oracle revenue to further
+      other schemes, because even evil oracles prefer more money to less (3 &gt;
+      0.125). Further, the burn option makes it likely that the evil oracle would
+      receive nothing in its exit scam, and worst-case scenarios are prudent focal
+      points in strategic analysis. While OracleSwap's oracle anticipates no rational
+      person would burn because it anticipates updating honestly, the existence of
+      this option makes the incentive compatibility of this contract more robust, as
+      its mere presence is useful even if it is never enacted.</p>
+
+    <p class=MsoNormal>It is important to remember the
+      oracle's duties are minimal. Few duties are essential because many
+      responsibilities would imply a conspicuous oracle that would be more prone to failure.
+      As its job is basically to update prices daily at a set time, which can be
+      scripted, the oracle's main job is to monitor its various APIs and
+      data-scraping programs for changes in data formats. We do not have to consider
+      the scenario of a burnt-out oracle, overwhelmed with or myriad
+      responsibilities, who finds the game too tedious for reasons outside of the
+      monetary cost-benefit analysis. </p>
+
+    <p class=MsoNormal>As a practical matter, initially
+      expected growth would be an order of magnitude greater than 5%, making the
+      value of the annuity much greater than 3RM. A trusted oracle could support many
+      other assets as well as atomic swaps, etc. Yet as the contract matures and
+      provides a greater potential amount to steal, the proportion of non-complicit
+      users&#8212;representing lost future closing fees&#8212;would increase, increasing the
+      present value of its oracle fee relative to a cheat payoff. Many dapps generate
+      almost zero revenue, and the only thing keeping reporters and administrators
+      honest is their belief in exponential growth, which is both delusional in most
+      cases, and unsustainable were it to occur. In contrast, our oracle has
+      sufficient incentives in a steady-state equilibrium. OracleSwap is a long-run
+      incentive compatible mechanism.</p>
+
+    <h2><a name="_Toc27044368"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>5.2 Parasites and Mimics</span></a><span style='mso-bookmark:
+_Toc27044368'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h2>
+
+    &nbsp;
+
+    <p class=MsoNormal>The oracle contract stores
+      closing prices that are accessible via a private function that only the
+      OracleSwap contract can access inside the Ethereum Virtual Machine (EVM). This
+      restriction prevents parasite contracts from using the oracle contract while
+      not paying the oracle. While all state variable data in this contract is
+      visible outside the EVM (oracle price updates generate event logs as well), the data
+      recorded by the oracle contract is trivial to discover elsewhere anyway. The
+      oracle problem is not technical; it is strategic; its data is only valuable in
+      the context of a smart contract that is forced to use these prices. A parasite
+      contract user would have to trust the parasite contract's oracle to copy this
+      information truthfully outside the EVM, which is the main problem, and cost, of
+      an oracle.</p>
+
+    <p class=MsoNormal>The contract's source code is
+      available for all to copy, modify, and deploy as anyone sees fit. Simply
+      copying the code is easy, the main costs are automating scripts for updating
+      the oracle contract and creating a distinctive user interface. We caution new
+      oracles that manually updating the data daily seems feasible initially, but
+      this is not sustainable so they must automate an oracle-updating protocol
+      (including an error-checking algorithm and having back-up computers online). </p>
+
+    <p class=MsoNormal>The downside to a low cost of
+      entry in this space typical to all thriving markets. With anonymity and without
+      a high fixed cost of entry, a hacker has little to lose by trying to abuse any
+      misplaced trust in look-alike contracts. A few subtle code changes can give them a backdoor to
+      contract ETH balances. Therefore, while we encourage imitators, we also advise
+      users to be wary of them. Most importantly, if
+      someone presents a mechanism that emphasizes zero costs, they should not be
+      trusted because either they are stupid or lying, as there would be insufficient
+      incentive for the oracle to be honest. </p>
+
+    <h1><a name="_Toc27044369"><span style='mso-fareast-font-family:"Times New Roman";
+color:#CCDAFF'>6 Conclusion</span></a><span style='mso-bookmark:_Toc27044369'></span><span style='mso-fareast-font-family:"Times New Roman"'></span></h1>
+
+    &nbsp;
+
+    <p class=MsoNormal>Most blockchain development
+      orients towards two extremes. On the one hand, you have firms emulating
+      traditional institutions only they transact with crypto as well as fiat
+      currency, on the other hand, you have protocols with broad generality and
+      decentralized consensus or governance mechanisms like bitcoin itself. While
+      these have valid use cases, they should be the exception and not the rule. The
+      standard institutions invariably violate at least one of the non-negotiable
+      crypto principles: transparency, immutability, anonymity, uncensorability, and
+      cryptographic custody. The generalized protocol dapps have complicated
+      collusion scenarios, and high consensus costs both direct (more players to pay)
+      and indirect (delayed payouts). </p>
+
+    <p class=MsoNormal>OracleSwap's oracle retains its anonymity on the blockchain, making
+      it immune to censorship, yet unlike merchants on the Tor network can be
+      monitored and held accountable due to the transparent and immutable blockchain.
+      This is what makes Ethereum so valuable, in that dapps do not need their own
+      decentralized consensus mechanisms or tokens. Prices used to generate OracleSwap's
+      PNLs are recorded in the oracle contract's event logs which need no parochial
+      adjustment to compare to exchange prices.  </p>
+
+    <p class=MsoNormal>A set of competing OracleSwap
+      contracts is more efficient than generalized oracles designed for unspecified
+      contracts, or generalized trading protocols designed for unspecified oracles.
+      Successful coinshifters have found that making 1% on a transaction is better
+      than making 100% on a cheat because of the present value of future
+      transactions. This is in a market where reputation is difficult to measure as
+      there are no clear records of cross-chain transactions that can prove a cheat,
+      so reputation is inferred via unverifiable anecdotes one reads in chatrooms. A
+      simple contract tied to an oracle that is 'all-in' creates clear and unambiguous accountability, generating the
+      strongest incentive for honest reporting.</p>
+
+    <p class=MsoNormal>Investors can create asset
+      exposure that is difficult to get elsewhere while staying on the blockchain. By
+      capping the weekly PNL at the required margin, investors need only attend to
+      their positions once a week and maintain a long-term position. Forward starting
+      prices help both the LP and investor, in that they remove any need to invest
+      time and money into continuous market monitoring and low-latency access.
+      Portfolio margining allows LPs to generate an attractive return while giving
+      investors competitive rates, and managed accounts allow large ETH holders to
+      trustlessly delegate LP duties. </p>
+
+    <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in'><span style='color:#9FB8FF'>There are significant gains
+        from trade available in finance because our options are restricted by
+        institutions protecting monopoly power under the pretext of protecting the
+        public. Offering financial asset protection is a good business or government
+        service; mandating protection is a racket. Ethereum derivative contracts are
+        alluring because they are the application of straightforward rules to objective
+        and widely disseminated asset prices. OracleSwap is a functioning contract, but
+        the source code and documentation provide a template for others.</p>
+
+    <div>
+
+      <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span style='mso-fareast-font-family:"Times New Roman"'><br clear=all style='mso-special-character:line-break'>
+      </p>
+
+      <div>
+
+        <div>
+
+          <div class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span style='mso-fareast-font-family:"Times New Roman"'>
+
+              <hr size=1 width="33%" align=left>
+
+            </span></div>
+
+        </div>
+
+      </div>
+
+      <div id=ftn1>
+
+        <p class=MsoFootnoteText><a name="_ftn1"></a><a href="#_ftnref1"><span style='mso-bookmark:_ftn1'><span class=MsoFootnoteReference>[1]</span></span><span style='mso-bookmark:_ftn1'></span></a><span style='mso-bookmark:_ftn1'></span>
+          Swap, also known as a total return swap, or CFD, contract-for-difference.</p>
+
+      </div>
+
+            <div id=ftn2>
+
+              <p class=MsoFootnoteText><a name="_ftn2"></a><a href="#_ftnref2"><span style='mso-bookmark:_ftn2'><span class=MsoFootnoteReference>[2]</span></span><span style='mso-bookmark:_ftn2'></span></a><span style='mso-bookmark:_ftn2'></span>
+                'Governments are good at cutting off the heads of a centrally controlled
+                networks like Napster, but pure P2P networks like Gnutella and Tor seem to be
+                holding their own.' Satoshi Nakamoto, Nov 7 2008.</p>
+
+            </div>
+
+      <div id=ftn3>
+
+        <p class=MsoFootnoteText><a name="_ftn3"></a><a href="#_ftnref3"><span style='mso-bookmark:_ftn3'><span class=MsoFootnoteReference>[3]</span></span><span style='mso-bookmark:_ftn3'></span></a><span style='mso-bookmark:_ftn3'></span>
+          The next 4 PM business-day price. All times referenced in this paper are USA
+          Eastern Time, New York City time.</p>
+
+      </div>
+
+      <div id=ftn4>
+
+        <p class=MsoFootnoteText><a name="_ftn4"></a><a href="#_ftnref4"><span style='mso-bookmark:_ftn4'><span class=MsoFootnoteReference>[4]</span></span><span style='mso-bookmark:_ftn4'></span></a><span style='mso-bookmark:_ftn4'></span>
+          The Coase Theorem states sufficiently low transaction costs and clear property
+          rights generate optimal capital allocations including externalities, regardless
+          of the initial allocation of property.</p>
+
+      </div>
+
+      <div id=ftn5>
+
+        <p class=MsoFootnoteText><a name="_ftn5"></a><a href="#_ftnref5"><span style='mso-bookmark:_ftn5'><span class=MsoFootnoteReference>[5]</span></span><span style='mso-bookmark:_ftn5'></span></a><span style='mso-bookmark:_ftn5'></span>
+          Akerlof's 'Market for Lemons' (<i>Quarterly Journal of Economics</i>, 1970)
+          paper analyzes markets where parties with asymmetric information separate, and
+          so the only offers have obvious negative value to potential buyers, and the
+          market collapses (i.e., no trades).</p>
+
+      </div>
+
+      <div id=ftn6>
+
+        <p class=MsoFootnoteText><a name="_ftn6"></a><a href="#_ftnref6"><span style='mso-bookmark:_ftn6'><span class=MsoFootnoteReference>[6]</span></span><span style='mso-bookmark:_ftn6'></span></a><span style='mso-bookmark:_ftn6'></span>
+          By spreading the execution price over a future time window VWAP overcame the
+          problems that prevented market-on-close orders from scaling. If OracleSwap
+          lists a less liquid asset or becomes very popular, the solution would be to
+          switch from a 5-minute window to a VWAP over a longer time window, just as the
+          CME uses an hour-long window for bitcoin futures settlement.</p>
+
+      </div>
+
+      <div id=ftn7>
+
+        <p class=MsoFootnoteText><a name="_ftn7"></a><a href="#_ftnref7"><span style='mso-bookmark:_ftn7'><span class=MsoFootnoteReference>[7]</span></span><span style='mso-bookmark:_ftn7'></span></a><span style='mso-bookmark:_ftn7'></span>
+          As noted in the technical appendix, collusion resistance is really about
+          conspiracy resistance, in that no decentralized system is collusion resistant
+          but this does not matter if they never collude maliciously. </p>
+
+      </div>
+
+      <div id=ftn8>
+
+        <p class=MsoFootnoteText><a name="_ftn8"></a><a href="#_ftnref8"><span style='mso-bookmark:_ftn8'><span class=MsoFootnoteReference>[8]</span></span><span style='mso-bookmark:_ftn8'></span></a><span style='mso-bookmark:_ftn8'></span>
+          See the works of Coase, Oliver Williamson, Douglas North and Elinor Ostrom.</p>
+
+      </div>
+
+      <div id=ftn9>
+
+        <p class=MsoFootnoteText><a name="_ftn9"></a><a href="#_ftnref9"><span style='mso-bookmark:_ftn9'><span class=MsoFootnoteReference>[9]</span></span><span style='mso-bookmark:_ftn9'></span></a><span style='mso-bookmark:_ftn9'></span>
+          E.g., prior to civil commercial law there were courts along trade routes
+          throughout Medieval Europe that enforced commercial laws (the <i>Lex mercatoria</i>),
+          and its judgments were accepted not out of any legal authority granted by a
+          state's monopoly on violence, but rather refusal would ruin one's business
+          reputation and thus future revenue.</p>
+
+      </div>
+
+      <div id=ftn10>
+
+        <p class=MsoFootnoteText><a name="_ftn10"></a><a href="#_ftnref10"><span style='mso-bookmark:_ftn10'><span class=MsoFootnoteReference>[10]</span></span><span style='mso-bookmark:_ftn10'></span></a><span style='mso-bookmark:_ftn10'></span>
+          For most decentralized systems, free riding is the most common action, creating
+          a dead-weight cost.</p>
+
+      </div>
+
+      <div id=ftn11>
+
+        <p class=MsoFootnoteText><a name="_ftn11"></a><a href="#_ftnref11"><span style='mso-bookmark:_ftn11'><span class=MsoFootnoteReference>[11]</span></span><span style='mso-bookmark:_ftn11'></span></a><span style='mso-bookmark:_ftn11'></span>
+          Burnt PNL is simply in limbo, inaccessible by anyone. Burning rather than
+          contributing to some pool is related to Holmstr&#246;m's Theorem, which states that
+          no incentive system for a team of agents can satisfy all the following
+          properties: money in=money out, Nash equilibrium, and Pareto efficiency. See
+          Bengt Holmstr&#246;m, 'Moral Hazard in Teams' (<i>The Bell Journal of Economics</i>,
+          1982). </p>
+
+      </div>
+
+      <div id=ftn12>
+
+        <p class=MsoFootnoteText><a name="_ftn12"></a><a href="#_ftnref12"><span style='mso-bookmark:_ftn12'><span class=MsoFootnoteReference>[12]</span></span><span style='mso-bookmark:_ftn12'></span></a><span style='mso-bookmark:_ftn12'></span>
+          <a name="_Hlk18583582">Such outcomes are 'off the equilibrium path,' in that it
+            is never reached in equilibrium, but its existence is necessary for the
+            equilibrium. </a></p>
+
+      </div>
+
+      <div id=ftn13>
+
+        <p class=MsoFootnoteText><a name="_ftn13"></a><a href="#_ftnref13"><span style='mso-bookmark:_ftn13'><span class=MsoFootnoteReference>[13]</span></span><span style='mso-bookmark:_ftn13'></span></a><span style='mso-bookmark:_ftn13'></span>
+          Leverage Ratios are 2.5 for ETH and BTC, 10 for the SPX.</p>
+
+      </div>
+
+      <div id=ftn14>
+
+        <p class=MsoFootnoteText><a name="_ftn14"></a><a href="#_ftnref14"><span style='mso-bookmark:_ftn14'><span class=MsoFootnoteReference>[14]</span></span><span style='mso-bookmark:_ftn14'></span></a><span style='mso-bookmark:_ftn14'></span>
+          Other factors that affect the basis are discussed in the Technical Appendix</p>
+
+      </div>
+
+      <div id=ftn17>
+
+        <p class=MsoFootnoteText><a name="_ftn17"></a><a href="#_ftnref17"><span style='mso-bookmark:_ftn17'><span class=MsoFootnoteReference>[17]</span></span><span style='mso-bookmark:_ftn17'></span></a><span style='mso-bookmark:_ftn17'></span>
+          Stock exchange holidays are scheduled three years in advance, though
+          occasionally there are <i>ad hoc</i> holidays, such as when ex-President Bush
+          died and markets were closed on Wednesday, 12/5/18.</p>
+
+      </div>
+
+      <div id=ftn18>
+
+        <p class=MsoFootnoteText><a name="_ftn18"></a><a href="#_ftnref18"><span style='mso-bookmark:_ftn18'><span class=MsoFootnoteReference>[18]</span></span><span style='mso-bookmark:_ftn18'></span></a><span style='mso-bookmark:_ftn18'></span>
+          There are about 9 New York Stock Exchange holidays, and if they occur on a Friday,
+          we will use the prior Thursday as the settlement date. Holiday-shortened days
+          will use the 1 PM closing stock market prices but the 4:00 PM ET crypto prices
+          that day.</p>
+
+      </div>
+
+      <div id=ftn19>
+
+        <p class=MsoFootnoteText><a name="_ftn19"></a><a href="#_ftnref19"><span style='mso-bookmark:_ftn19'><span class=MsoFootnoteReference>[19]</span></span><span style='mso-bookmark:_ftn19'></span></a><span style='mso-bookmark:_ftn19'></span>
+          See the Bitwise Presentation to the US SEC, dated 3/20/19. Their approved
+          exchanges are Binance, Bitfinex, Kraken, Bitstamp, Coinbase, BitFlyer, Gemini,
+          itBit, Bittrex, and Poloniex</p>
+
+      </div>
+
+      <div id=ftn20>
+
+        <p class=MsoFootnoteText><a name="_ftn20"></a><a href="#_ftnref20"><span style='mso-bookmark:_ftn20'><span class=MsoFootnoteReference>[20]</span></span><span style='mso-bookmark:_ftn20'></span></a><span style='mso-bookmark:_ftn20'></span>
+          Any excess payment for a burn or cancel goes into the player margin, available
+          for withdraw upon redeeming.</p>
+
+      </div>
+
+      <div id=ftn21>
+
+        <p class=MsoFootnoteText><a name="_ftn21"></a><a href="#_ftnref21"><span style='mso-bookmark:_ftn21'><span class=MsoFootnoteReference>[21]</span></span><span style='mso-bookmark:_ftn21'></span></a><span style='mso-bookmark:_ftn21'></span>For
+          example, see Robert Axelrod's <i>Evolution of Cooperation</i> (1982), which
+          highlights the value of repeated games in creating cooperative outcomes.</p>
+
+      </div>
+
+      <div id=ftn22>
+
+        <p class=MsoFootnoteText><a name="_ftn22"></a><a href="#_ftnref22"><span style='mso-bookmark:_ftn22'><span class=MsoFootnoteReference>[22]</span></span><span style='mso-bookmark:_ftn22'></span></a><span style='mso-bookmark:_ftn22'></span>
+          While the ETH remains in the LP book contract, it is unobtainable by anyone.</p>
+
+      </div>
+
+      <div id=ftn23>
+
+        <p class=MsoFootnoteText><a name="_ftn23"></a><a href="#_ftnref23"><span style='mso-bookmark:_ftn23'><span class=MsoFootnoteReference>[23]</span></span><span style='mso-bookmark:_ftn23'></span></a><span style='mso-bookmark:_ftn23'></span>
+          The LP's revenue reduction is netted, so that if long 100 and short 50, and the
+          short side burned 40%, this would affect the LP's net long position of 50, not
+          the gross. </p>
+
+      </div>
+
+      <div id=ftn24>
+
+        <p class=MsoFootnoteText><a name="_ftn24"></a><a href="#_ftnref24"><span style='mso-bookmark:_ftn24'><span class=MsoFootnoteReference>[24]</span></span><span style='mso-bookmark:_ftn24'></span></a><span style='mso-bookmark:_ftn24'></span>
+          PV=dividend/(discount rate growth rate).</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

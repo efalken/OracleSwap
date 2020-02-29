@@ -1,0 +1,740 @@
+{
+  "contractName": "Book",
+  "abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "user",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "admin",
+					"type": "address"
+				},
+				{
+					"internalType": "uint16",
+					"name": "minReqMarg",
+					"type": "uint16"
+				},
+				{
+					"internalType": "uint8",
+					"name": "closefee",
+					"type": "uint8"
+				},
+				{
+					"internalType": "int16",
+					"name": "fundRateLong",
+					"type": "int16"
+				},
+				{
+					"internalType": "int16",
+					"name": "fundRateShort",
+					"type": "int16"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint16",
+					"name": "_min",
+					"type": "uint16"
+				}
+			],
+			"name": "adjustMinRMBook",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "assetSwap",
+			"outputs": [
+				{
+					"internalType": "contract AssetSwap",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "bookCloseFee",
+			"outputs": [
+				{
+					"internalType": "uint8",
+					"name": "",
+					"type": "uint8"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "bookEndTime",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "bookStatus",
+			"outputs": [
+				{
+					"internalType": "uint8",
+					"name": "",
+					"type": "uint8"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "burnFactor",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "msgval",
+					"type": "uint256"
+				}
+			],
+			"name": "burnLPBook",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "msgval",
+					"type": "uint256"
+				}
+			],
+			"name": "burnTakerBook",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "lastOracleSettle",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				},
+				{
+					"internalType": "uint8",
+					"name": "_endDay",
+					"type": "uint8"
+				}
+			],
+			"name": "cancelBook",
+			"outputs": [],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "closeBookBook",
+			"outputs": [],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "fundLPBook",
+			"outputs": [],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				}
+			],
+			"name": "fundTakerBook",
+			"outputs": [],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "fundingRates",
+			"outputs": [
+				{
+					"internalType": "int16",
+					"name": "",
+					"type": "int16"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getSettleInfoBook",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "totalLength",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "expiringLength",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "newLength",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "lastBookSettleUTC",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "settleNumber",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "bookBalance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "bookMaturityUTC",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				}
+			],
+			"name": "getSubkData1Book",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "takerAddress",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "takerMargin",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "requiredMargin",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				}
+			],
+			"name": "getSubkData2Book",
+			"outputs": [
+				{
+					"internalType": "uint8",
+					"name": "kStatus",
+					"type": "uint8"
+				},
+				{
+					"internalType": "uint8",
+					"name": "priceDay",
+					"type": "uint8"
+				},
+				{
+					"internalType": "uint8",
+					"name": "closeFee",
+					"type": "uint8"
+				},
+				{
+					"internalType": "int16",
+					"name": "fundingRate",
+					"type": "int16"
+				},
+				{
+					"internalType": "bool",
+					"name": "takerSide",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_lastOracleSettle",
+					"type": "uint256"
+				}
+			],
+			"name": "inactiveLPBook",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "inactiveOracleBook",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "lastBookSettleTime",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "lp",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "lpMinTakeRM",
+			"outputs": [
+				{
+					"internalType": "uint16",
+					"name": "",
+					"type": "uint16"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "lpSettleDebitAcct",
+			"outputs": [
+				{
+					"internalType": "int256",
+					"name": "",
+					"type": "int256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "margin",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkid",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				}
+			],
+			"name": "redeemBook",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "int256[5]",
+					"name": "assetRetExp",
+					"type": "int256[5]"
+				}
+			],
+			"name": "settleExpiring",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "settleFinal",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "int256[5]",
+					"name": "assetRets",
+					"type": "int256[5]"
+				}
+			],
+			"name": "settleNew",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "settleNum",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "int256",
+					"name": "assetRet",
+					"type": "int256"
+				}
+			],
+			"name": "settleRolling",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"name": "subcontracts",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "taker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "takerMargin",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "requiredMargin",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint16",
+					"name": "index",
+					"type": "uint16"
+				},
+				{
+					"internalType": "int16",
+					"name": "fundingRate",
+					"type": "int16"
+				},
+				{
+					"internalType": "uint8",
+					"name": "closeFee",
+					"type": "uint8"
+				},
+				{
+					"internalType": "uint8",
+					"name": "subkStatus",
+					"type": "uint8"
+				},
+				{
+					"internalType": "uint8",
+					"name": "priceDay",
+					"type": "uint8"
+				},
+				{
+					"internalType": "int8",
+					"name": "takerSide",
+					"type": "int8"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "taker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "rM",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "lastOracleSettle",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint8",
+					"name": "_priceDay",
+					"type": "uint8"
+				},
+				{
+					"internalType": "uint256",
+					"name": "isTakerLong",
+					"type": "uint256"
+				}
+			],
+			"name": "takeBook",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "takerContracts",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "tempContracts",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint8",
+					"name": "newClose",
+					"type": "uint8"
+				},
+				{
+					"internalType": "int16",
+					"name": "longRate",
+					"type": "int16"
+				},
+				{
+					"internalType": "int16",
+					"name": "shortRate",
+					"type": "int16"
+				}
+			],
+			"name": "updateFeesBook",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "lastOracleSettle",
+					"type": "uint256"
+				}
+			],
+			"name": "withdrawLPBook",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "subkID",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "lastOracleSettle",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				}
+			],
+			"name": "withdrawTakerBook",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

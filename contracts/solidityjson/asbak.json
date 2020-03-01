@@ -3,7 +3,7 @@
   "abi": [
 		{
 			"inputs": [
-			 	{
+				{
 					"internalType": "address",
 					"name": "priceOracle",
 					"type": "address"
@@ -153,6 +153,7 @@
 			"name": "adjustMinRM",
 			"outputs": [],
 			"stateMutability": "nonpayable",
+      "payable": false,
 			"type": "function"
 		},
 		{

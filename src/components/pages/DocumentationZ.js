@@ -7,7 +7,7 @@ import VBackground from "../basics/VBackground";
 import { autoBind } from "react-extras";
 import Take from "../../images/Take.gif";
 import Redeem from "../../images/Redeem.gif";
-import SettleParts from "../../images/SettleParts1.gif";
+import SettleParts from "../../images/SettleParts.gif";
 import CancelTaker from "../../images/CancelTaker.gif";
 import TakerWD from "../../images/TakerWD.gif";
 import FundTaker from "../../images/FundTaker.gif";
@@ -104,7 +104,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7. Contract Functions
+                          8. Contract Functions
                         </span>
                       </p>
                     </a>
@@ -119,7 +119,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.1 Take Position
+                          8.1 Take Position
                         </span>
                       </p>
                     </a>
@@ -134,7 +134,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.2 Taker Curing Margin
+                          8.2 Taker Curing Margin
                         </span>
                       </p>
                     </a>
@@ -149,7 +149,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.3 Taker Cancel
+                          8.3 Taker Cancel
                         </span>
                       </p>
                     </a>
@@ -164,7 +164,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.5 Become an LP
+                          8.5 Become an LP
                         </span>
                       </p>
                     </a>
@@ -179,7 +179,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.6 LP Curing Margin
+                          8.6 LP Curing Margin
                         </span>
                       </p>
                     </a>
@@ -194,7 +194,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.7 Withdrawing Margin
+                          8.7 Withdrawing Margin
                         </span>
                       </p>
                     </a>
@@ -209,7 +209,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.9 LP Settlement Execution
+                          8.9 LP Settlement Execution
                         </span>
                       </p>
                     </a>
@@ -224,7 +224,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.10 LP Fee Adjustments
+                          8.10 LP Fee Adjustments
                         </span>
                       </p>
                     </a>
@@ -239,7 +239,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.11 LP Adjust Minimum RM Size
+                          8.11 LP Adjust Minimum RM Size
                         </span>
                       </p>
                     </a>
@@ -254,7 +254,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          7.16 User Rights and Restrictions
+                          8.16 User Rights and Restrictions
                         </span>
                       </p>
                     </a>
@@ -299,7 +299,7 @@ class Documentation extends Component {
                           style={{ color: "#CCDAFF" }}
                           className="docu-sidebar"
                         >
-                          9. Definitions
+                          10. Definitions
                         </span>
                       </p>
                     </a>
@@ -374,7 +374,7 @@ class Documentation extends Component {
                     <a
                       className="nav-header"
                       style={{ textDecoration: "none", cursor: "pointer" }}
-                      href="http://github.com/efalken/OracleSwap"
+                      href="http://github.com/lorenzobotticelli/OracleSwap"
                     >
                       Github Project
                     </a>
@@ -449,7 +449,7 @@ class Documentation extends Component {
                     }}
                     id="section8"
                   >
-                    7 Contract Functions
+                    8 Contract Functions
                   </span>
                 </span>
                 <span
@@ -466,7 +466,7 @@ class Documentation extends Component {
                     }}
                     id="section8_1"
                   >
-                    7.1 Take position
+                    8.1 Take position
                   </span>
                 </a>
                 <span></span>
@@ -593,7 +593,7 @@ class Documentation extends Component {
                   }}
                   id="section8_2"
                 >
-                  7.2 Taker Curing Margin
+                  8.2 Taker Curing Margin
                 </span>
                 <span
                   style={{ msoFareastFontFamily: "Times New Roman" }}
@@ -673,7 +673,7 @@ class Documentation extends Component {
                     }}
                     id="section8_3"
                   >
-                    7.3 Taker cancel
+                    8.3 Taker cancel
                   </span>
                 </a>
 
@@ -898,7 +898,7 @@ class Documentation extends Component {
                     }}
                     id="section8_5"
                   >
-                    7.5 Become an LP
+                    8.5 Become an LP
                   </span>
                 </a>
 
@@ -1076,7 +1076,7 @@ class Documentation extends Component {
                     }}
                     id="section8_6"
                   >
-                    7.6 LP Curing Margin
+                    8.6 LP Curing Margin
                   </span>
                 </a>
 
@@ -1182,7 +1182,7 @@ class Documentation extends Component {
                     }}
                     id="section8_7"
                   >
-                    7.7 Withdrawing margin
+                    8.7 Withdrawing margin
                   </span>
                 </a>
 
@@ -1339,7 +1339,7 @@ class Documentation extends Component {
                     }}
                     id="section8_9"
                   >
-                    7.9 LP Settlement{" "}
+                    8.9 LP Settlement{" "}
                   </span>
                 </a>
 
@@ -1798,7 +1798,7 @@ class Documentation extends Component {
                     }}
                     id="section8_10"
                   >
-                    7.10 LP Fee Adjustments
+                    8.10 LP Fee Adjustments
                   </span>
                 </a>
                 <div style={{ marginLeft: "100px" }}>
@@ -2312,7 +2312,7 @@ class Documentation extends Component {
                     }}
                     id="section8_11"
                   >
-                    7.11 LP Adjust minimum RM size
+                    8.11 LP Adjust minimum RM size
                   </span>
                 </a>
                 <span
@@ -2368,7 +2368,7 @@ class Documentation extends Component {
                     }}
                     id="section8_16"
                   >
-                    7.16 User Rights and Restrictions
+                    8.16 User Rights and Restrictions
                   </span>
                 </a>
                 <span></span>
@@ -2703,7 +2703,7 @@ class Documentation extends Component {
                     }}
                     id="section9"
                   >
-                    8 Security Considerations
+                    9 Security Considerations
                   </span>
                 </a>
                 <span
@@ -2731,7 +2731,7 @@ class Documentation extends Component {
                     }}
                     id="section9_2"
                   >
-                    7.2 Contract Constraints
+                    9.2 Contract Constraints
                   </span>
                 </a>
 
@@ -2908,11 +2908,12 @@ class Documentation extends Component {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
                 <span style={{ color: "#9FB8FF" }}>
-                  3.	The book contracts prevent users from settling their books
-                  more than once during the settlement period. Specifically, the
-                  settlement process cannot commence until the oracle settlement
-                  update time is after the last book settlement time (the book
-                    update time).{" "}
+                  The book contracts prevent users from running settlement more
+                  than once during the settlement period. Once the final
+                  settlement function is completed the lastBookUpdate time is
+                  updated, and the settlement process cannot commence if the
+                  last book update time is greater than the last oracle
+                  settlement time.{" "}
                 </span>
               </p>
               <p
@@ -3040,7 +3041,7 @@ class Documentation extends Component {
                   textIndent: "-.25in"
                 }}
               >
-                <span style={{ color: "#9FB8FF" }}>7.</span>
+                <span style={{ color: "#9FB8FF" }}>8.</span>
                 <span
                   style={{
                     fontSize: "7.0pt",
@@ -3051,13 +3052,11 @@ class Documentation extends Component {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
                 <span style={{ color: "#9FB8FF" }}>
-                  Defaults are paid to the oracle to encourage burning. Even
-                  if the player had less than 0.5RM, say 0.3RM left over, and thus
-                  actually has to pay extra to punish the oracle (a default would
-                    cost 0.3RM, a burn 0.5RM), buring deprives the  cheating oracle
-                    of the fraudulent PNL and the 0.3RM default fee, maximizing burn
-                    pain. Costly punishment encourages people who feel the agent
-                    deserves punishment, to punish.
+                  Defaults are paid to the oracle to encourage burning. Even if
+                  the player had less than 0.5RM, say 0.3RM left over, while the
+                  default fee would be strictly less than the burn fee, buring
+                  depriveshe cheating oracle of the 0.3RM and the fraudulent
+                  PNL, maximizing burn pain.{" "}
                 </span>
               </p>
               &nbsp;
@@ -3545,25 +3544,6 @@ class Documentation extends Component {
                 }}
               >
                 <b>
-                  <span style={{ color: "#9FB8FF" }}>Gwei</span>
-                </b>
-                <span style={{ color: "#9FB8FF" }}>
-                  : 1e-3 Szabo, or 1e-9 ETH. Pronounced 'gway.' Anyone developing
-                   their own version of OracleSwap should use ETH as the unit of
-                    denomination, and Finney as the subunits. Here, Gwei are
-                   the subunits of Szabo, as Finney are the subunits of Ether.
-                </span>
-              </p>
-                <p
-                className="MsoNormal"
-                style={{
-                  marginTop: "12.0pt",
-                  marginRight: "0in",
-                  marginBottom: "12.0pt",
-                  marginLeft: "0in"
-                }}
-              >
-                <b>
                   <span style={{ color: "#9FB8FF" }}>Leverage Ratio:</span>
                 </b>
                 <span style={{ color: "#9FB8FF" }}>
@@ -3795,50 +3775,6 @@ class Documentation extends Component {
                 }}
               >
                 <b>
-                  <span style={{ color: "#9FB8FF" }}>Price Day:</span>
-                </b>
-                <span style={{ color: "#9FB8FF" }}>
-                  {" "}
-                  The day of the first price for a subcontract. It is determined
-                  by the Oracle contract, which knows what the next day of the
-                  week will be. Thus, if it is Tuesday prior to the oracle price
-                  update in the 4-5 PM time period, the start day will by
-                  Tuesday; if it is Tuesday after the oracle price update, the
-                  start day will be Wednesday. For a position with an intraweek
-                  close, the price day is actually the ending day price, and so
-                  the return from start day to settle is subtracted from their
-                  returns.
-                </span>
-              </p>
-              <p
-                className="MsoNormal"
-                style={{
-                  marginTop: "12.0pt",
-                  marginRight: "0in",
-                  marginBottom: "12.0pt",
-                  marginLeft: "0in"
-                }}
-              >
-                <b>
-                  <span style={{ color: "#9FB8FF" }}>Redeem</span>
-                </b>
-                <span style={{ color: "#9FB8FF" }}>
-                  : This function moves the investor's ETH to the AssetSwap contract,
-                  from where it can be withdrawn to the investor's account. It is
-                  the only way to withdraw funds after a subcontracts last
-                  settlement, or if the LP's book is inactive or in default.
-                </span>
-              </p>
-              <p
-                className="MsoNormal"
-                style={{
-                  marginTop: "12.0pt",
-                  marginRight: "0in",
-                  marginBottom: "12.0pt",
-                  marginLeft: "0in"
-                }}
-              >
-                <b>
                   <span style={{ color: "#9FB8FF" }}>RM</span>
                 </b>
                 <span style={{ color: "#9FB8FF" }}>
@@ -3928,17 +3864,21 @@ class Documentation extends Component {
                 }}
               >
                 <b>
-                  <span style={{ color: "#9FB8FF" }}>Szabo:</span>
+                  <span style={{ color: "#9FB8FF" }}>Price Day:</span>
                 </b>
                 <span style={{ color: "#9FB8FF" }}>
                   {" "}
-                  1e-6 ETH. This web version uses Szabo because it is not meant to be
-                  economically meaningful, just a way to see how it works.
-                  Anyone developing their own version of OracleSwap should use
-                  ETH as the unit of denomination.
+                  The day of the first price for a subcontract. It is determined
+                  by the Oracle contract, which knows what the next day of the
+                  week will be. Thus, if it is Tuesday prior to the oracle price
+                  update in the 4-5 PM time period, the start day will by
+                  Tuesday; if it is Tuesday after the oracle price update, the
+                  start day will be Wednesday. For a position with an intraweek
+                  close, the price day is actually the ending day price, and so
+                  the return from start day to settle is subtracted from their
+                  returns.
                 </span>
-                </p>
-
+              </p>
               <p
                 className="MsoNormal"
                 style={{
@@ -4085,6 +4025,7 @@ class Documentation extends Component {
                     <hr size="1" width="33%" align="left" />
                   </span>
                 </div>
+
               </div>
             </div>
           </div>

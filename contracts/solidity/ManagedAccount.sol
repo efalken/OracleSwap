@@ -80,7 +80,8 @@ contract ManagedAccount {
     receive ()
         external
         payable
-    { }
+    { emit AddedFunds(msg.value, msg.sender);
+    }
 
     function disableManager(bool _managerStatus)
         external

@@ -117,10 +117,12 @@ There is a ManagedAccount.sol solidity file that can be used to create your own
 managed account that interacts with the AssetSwap contract
 
 There is a python file that can be used as a template for updating your own
-oracle contract. We do not include an API contract to pull data, so you will
-need to do that yourself. PushPrices.py. If you have web3.js installed, and the
-python packages listed at the top, you can use this to automate your oracle
-contract updates. You need at least Python 3.6 for this.
+oracle contract (in public/PushPrices.py). I do not include an API contract to
+pull data, so you will need to do that yourself. If you have web3.js installed,
+and the python packages listed at the top, you can use this to automate your
+oracle contract updates. You need at least Python 3.6 to use web3.js with the
+blockchain. Here is where you put in your own oracle contract address, wallet
+public and private key, and infura address.
 
 Managed Account
 

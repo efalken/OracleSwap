@@ -2,18 +2,21 @@ import requests
 from datetime import datetime, timedelta
 import os
 from pathlib import Path
+import numpy as np
 from web3 import Web3, HTTPProvider
 import time
 import json
-# put real private key and address here
-wallet_private_key = "0x00000000000000000000000000000000"
-wallet_address = "0x000000000000000000000000000000"
 
-#  provider_url = "https://ropsten.infura.io/v3/ff71f0ac9a2c42caa271851f369053f6"
-# put personal infura address here
-provider_url = "https://mainnet.infura.io/v3/ff71f0ac9a2c42caa271851f369053f6"
-# change to your oracle address
-contract_address = "0x18d51856b176e2aeab5fd0fb35b6d0110bcec10a"
+if os.name == 'nt':
+    contract_abi = Path('C:/users/Eric/documents/mega/oracleNY1/Oracle.json')
+else:
+    contract_abi = Path('/home/lorenzo/oracle/Oracle.json')
+wallet_private_key = "0x1ecb9e4a4b7be7d33392c7c53fa23a31daab1917a8ac271efa8573f166cfa62b"
+wallet_address = "0xd7184Fafc2B4337E49FD059CA9FD04a98b63537a"
+
+#  provider_url =  "https://ropsten.infura.io/v3/30a3fd3439754a74aa30ffae717d5d4c"
+provider_url = "https://mainnet.infura.io/v3/30a3fd3439754a74aa30ffae717d5d4c"
+contract_address = "0xb0009Be42625f9AD53221DD0aC1BB1b799467AC0"
 
 start_time = time.time()
 gas_url = "https://ethgasstation.info/json/ethgasAPI.json"
@@ -21,7 +24,7 @@ gas_p = 0
 req = requests.get(gas_url)
 if (req.status_code == 200):
     t = json.loads(req.content)
-    gas_p = t['fast'] / 5
+    gas_p = t['fast'] / 10
     print('gas price', gas_p)
 else:
     gas_p = 15
@@ -33,6 +36,14 @@ with open(contract_abi) as f:
     contract_address = contract_abi['address']
     contract_address = w3.toChecksumAddress(contract_address)
     contract = w3.eth.contract(address=contract_address, abi=contract_abi['abi'])
+
+
+def seive(array_in):
+    array_in = array_in[array_in != 0]
+    num1 = array_in.size
+    if num1 > 1:
+        med1 = np.median(array_in)
+    return med1
 
 
 def update_PriceBatch(ethprice, spxprice, btcprice, final_day):
@@ -72,21 +83,24 @@ def is_final_day():
         return False
 
 if __name__ == "__main__":
-    curr_date = datetime.now().date()
-    current_date = curr_date.strftime("%y%m%d")
-''' if a thursday, will report true, indicating tomorrow is a settlemnet price.
-If Thurs or Friday is a holiday, this needs to be adjusted so you will settle correctly
-'''
+    AVdate = datetime.now().date() - timedelta(days=0)
+    current_date = AVdate.strftime("%y%m%d")
     is_final = is_final_day()
 
     eth_app = 'eth' + current_date + '.txt'
     btc_app = 'btc' + current_date + '.txt'
     spx_app = 'spx' + current_date + '.txt'
 
-    eth_new = Path('/home/lorenzo/oracle/data/') / eth_app
-    btc_new = Path('/home/lorenzo/oracle/data/') / btc_app
-    spx_new = Path('/home/lorenzo/oracle/data/') / spx_app
-    contract_abi = Path('/home/lorenzo/oracle/OracleMain.json')
+    if os.name == 'nt':
+        eth_new = Path('C:/users/Eric/documents/mega/oracleNY1/data/') / eth_app
+        btc_new = Path('C:/users/Eric/documents/mega/oracleNY1/data/') / btc_app
+        spx_new = Path('C:/users/Eric/documents/mega/oracleNY1/data/') / spx_app
+        contract_abi = Path('C:/users/Eric/documents/mega/oracleNY1/Oracle.json')
+    else:
+        eth_new = Path('/home/lorenzo/oracle/data/') / eth_app
+        btc_new = Path('/home/lorenzo/oracle/data/') / btc_app
+        spx_new = Path('/home/lorenzo/oracle/data/') / spx_app
+        contract_abi = Path('C:/users/Eric/documents/mega/oracleNY1/Oracle.json')
 
     spx_final_f = open(spx_new, 'r')
     spx_final = spx_final_f.readline()
@@ -107,16 +121,24 @@ If Thurs or Friday is a holiday, this needs to be adjusted so you will settle co
     with open(contract_abi) as f:
         contract_abi = json.load(f)
         contract = w3.eth.contract(address=contract_address, abi=contract_abi['abi'])
+    currDay = contract.functions.currentDay().call()
     isSettle = contract.functions.nextUpdateSettle().call()
     updateTime = contract.functions.lastUpdateTime().call()
     OracleContractDay = datetime.utcfromtimestamp(updateTime).strftime("%y%m%d")
 
-''' checks to see if date of last price is today. If so, it does not send
-'''
+
     if current_date != OracleContractDay:
-''' if not the settlement day, uses the intraweek price update function
-'''
         if not isSettle:
             eth_tx = update_PriceBatch(int(eth_final * 1e2), int(spx_final * 1e2), int(btc_final * 1e2), is_final)
+            print('regular')
         else:
             eth_tx = update_Settle(int(eth_final * 1e2), int(spx_final * 1e2), int(btc_final * 1e2))
+            print('settle')
+
+
+print(int(eth_final * 1e2), int(spx_final * 1e2), int(btc_final * 1e2))
+print('is final flag', is_final)
+print('isSettle', isSettle)
+print('current date', current_date)
+print('date of old data', OracleContractDay)
+print('finished')

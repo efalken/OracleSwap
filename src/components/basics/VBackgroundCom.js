@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@rebass/grid'
 import Text from './Text'
-import Background from '../../images/background60.mp4'
+import Background from '../../images/background.mp4'
 import { C } from '../basics/Colors'
 
 export default

@@ -29,13 +29,14 @@ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
 
 contract Oracle {
 
-    constructor (uint ethPrice, uint spxPrice, uint btcPrice) public {
+    constructor (uint ethPrice, uint spxPrice, uint btcPrice, address backup) public {
         admins[msg.sender] = true;
+        admins[backup] = true;
         prices[0][5] = ethPrice;
         prices[1][5] = spxPrice;
         prices[2][5] = btcPrice;
-        lastUpdateTime = now;
-        lastSettleTime = now;
+        lastUpdateTime = now - 1 days;
+        lastSettleTime = now - 3 days;
         currentDay = 5;
         levRatio[0] = 250;  // ETH contract 2.5 leverage
         levRatio[1] = 1000; /// SPX contract 10.0 leverage

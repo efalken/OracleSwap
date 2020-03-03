@@ -11,9 +11,9 @@ wallet_address = "0x000000000000000000000000000000"
 
 #  provider_url = "https://ropsten.infura.io/v3/ff71f0ac9a2c42caa271851f369053f6"
 # put personal infura address here
-provider_url = "https://mainnet.infura.io/v3/ff71f0ac9a2c42caa271851f369053f6"
+provider_url = "https://mainnet.infura.io/v3/yourinfuraaddress"
 # change to your oracle address
-contract_address = "0x18d51856b176e2aeab5fd0fb35b6d0110bcec10a"
+contract_address = "yourinfuraaddress"
 
 start_time = time.time()
 gas_url = "https://ethgasstation.info/json/ethgasAPI.json"

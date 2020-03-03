@@ -30,16 +30,15 @@ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
 contract ManagedAccount {
 /// fee is in basis points. 100 means 1.0% of assets per year is sent to the manager
 
-    constructor(address payable _investor, address payable _manager, uint _fee) public {
+    constructor(address payable _manager, uint _fee) public {
         manager = _manager;
-        investor = _investor;
+        investors[msg.sender] = true;
         lastUpdateTime = now;
-        managerStatus = true;
         mgmtFee = _fee;
     }
 
     address payable public manager;
-    address payable public investor;
+    mapping(address payable => bool) public investors;
     mapping(address => bool) public approvedSwaps;
     mapping(bytes32 => Takercontract) public takercontracts;
     bytes32[] public ourTakerContracts;
@@ -47,7 +46,6 @@ contract ManagedAccount {
     uint public lastUpdateTime;
     uint public managerBalance;
     uint public totAUMlag;
-    bool public managerStatus;
     uint public mgmtFee;
 
     event AddedFunds(uint amount, address payor);
@@ -60,7 +58,7 @@ contract ManagedAccount {
     }
 
     modifier onlyInvestor() {
-        require(msg.sender == investor);
+        require(investors[msg.sender]);
         _;
     }
 
@@ -70,10 +68,7 @@ contract ManagedAccount {
     }
 
     modifier onlyApproved() {
-        if (managerStatus)
-            require(msg.sender == manager || msg.sender == investor);
-        else
-            require(msg.sender == investor);
+        require(msg.sender == manager || investors[msg.sender]);
         _;
     }
 
@@ -83,13 +78,26 @@ contract ManagedAccount {
     { emit AddedFunds(msg.value, msg.sender);
     }
 
-    function disableManager(bool _managerStatus)
+    function changeManager(address payable _manager)
         external
         onlyInvestor
     {
-        if (managerStatus && !_managerStatus)
-            generateFee(totAUMlag);
-        managerStatus = _managerStatus;
+        manager = _manager;
+    }
+
+    function addInvestor(address payable newInvestor)
+        external
+        onlyInvestor
+    {
+        investors[newInvestor] = true;
+    }
+
+    function removeInvestor(address payable oldInvestor)
+        external
+        onlyInvestor
+    {
+      require(oldInvestor != msg.sender);
+      investors[oldInvestor] = false;
     }
 
     function adjFee(uint newFee)

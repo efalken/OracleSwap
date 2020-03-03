@@ -109,6 +109,10 @@ These contract use compiler v0.6.3. To do this you must first load the three
 solidity contracts into Remix (Book.sol, AssetSwap.sol, and Oracle.sol),
 compile, and then 'load at address' for the contract in question.
 
+The background moving image (background.mp4) was purchased, and so I added a
+copywrite watermark so that people will be incented to use their own. If you are
+just using this on your desktop, it does not matter.
+
 The solidity files are in contracts/solidity, though they are also on etherscan.
 They are just for informational purposes, as the front-end just uses only their
 json files.

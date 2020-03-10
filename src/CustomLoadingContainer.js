@@ -19,21 +19,21 @@ class CustomLoader extends Component {
       contractName: "ETHSwap",
       web3Contract: new drizz.web3.eth.Contract(
         AssetSwap.abi,
-        "0x18aBbBEb52122CE4e72D4C498e373fd124057b88"
+        "0xA4eb2D8A2221e8fFF1D46f92cBa1064daE647b47"
       )
     };
     var SPXConfig = {
       contractName: "SPXSwap",
       web3Contract: new drizz.web3.eth.Contract(
         AssetSwap.abi,
-        "0xD1ebfffC3Ae13864FE86B735630e20b54Cc4B919"
+        "0xD61Bf2354C8cDeda745F8a318ba43293ef858Deb"
       )
     };
     var BTCConfig = {
       contractName: "BTCSwap",
       web3Contract: new drizz.web3.eth.Contract(
         AssetSwap.abi,
-        "0xeF841968872544Ae0a959Df96856be204DE717F6"
+        "0xfA8B6F7f756745a38C9596222c1bfdBb4bA8a157"
       )
     };
 

@@ -9,11 +9,11 @@ import json
 wallet_private_key = "0x00000000000000000000000000000000"
 wallet_address = "0x000000000000000000000000000000"
 
-#  provider_url = "https://ropsten.infura.io/v3/ff71f0ac9a2c42caa271851f369053f6"
 # put personal infura address here
-provider_url = "https://mainnet.infura.io/v3/yourinfuraaddress"
+# this only works for oracleContract
+provider_url = "https://mainnet.infura.io/v3/00000000000000000000000000000000"
 # change to your oracle address
-contract_address = "yourinfuraaddress"
+contract_address = "0x000000000000000000000000000000"
 
 start_time = time.time()
 gas_url = "https://ethgasstation.info/json/ethgasAPI.json"

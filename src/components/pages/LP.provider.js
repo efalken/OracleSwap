@@ -258,7 +258,7 @@ class BookInfo extends Component {
       'SubkTracker',
       {
         //  filter: {e_lp: this.currentLP},
-        fromBlock: 9483671,
+        fromBlock: 9600636,
         toBlock: 'latest'
       }
     ).then(function (events) {

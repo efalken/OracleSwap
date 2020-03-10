@@ -1,13 +1,13 @@
 {
 "contractName": "Oracle",
-"abi":  [
+"abi":   [
 		{
 			"inputs": [
 				{
 					"internalType": "uint256",
 					"name": "ethPrice",
 					"type": "uint256"
-			 	},
+				},
 				{
 					"internalType": "uint256",
 					"name": "spxPrice",
@@ -22,6 +22,50 @@
 			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "constructor"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "ethSwapContract",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "spxSwapContract",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "btcSwapContract",
+					"type": "address"
+				}
+			],
+			"name": "AssetSwapContractsChange",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "reader",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "bool",
+					"name": "onOrOff",
+					"type": "bool"
+				}
+			],
+			"name": "ChangeReaderStatus",
+			"type": "event"
 		},
 		{
 			"anonymous": false,
@@ -86,31 +130,6 @@
 			"inputs": [
 				{
 					"internalType": "address",
-					"name": "newAS0",
-					"type": "address"
-				},
-				{
-					"internalType": "address",
-					"name": "newAS1",
-					"type": "address"
-				},
-				{
-					"internalType": "address",
-					"name": "newAS2",
-					"type": "address"
-				}
-			],
-			"name": "addAssetSwaps",
-			"outputs": [],
-			"payable": false,
-			"stateMutability": "nonpayable",
-			"type": "function"
-		},
-		{
-			"constant": false,
-			"inputs": [
-				{
-					"internalType": "address",
 					"name": "newReader",
 					"type": "address"
 				}
@@ -161,6 +180,31 @@
 			],
 			"payable": false,
 			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "newAS0",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "newAS1",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "newAS2",
+					"type": "address"
+				}
+			],
+			"name": "changeAssetSwaps",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
@@ -366,6 +410,21 @@
 			"constant": false,
 			"inputs": [
 				{
+					"internalType": "address",
+					"name": "oldReader",
+					"type": "address"
+				}
+			],
+			"name": "removeReaders",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
 					"internalType": "uint256",
 					"name": "ethp",
 					"type": "uint256"
@@ -457,9 +516,9 @@
 		"name": "PriceUpdated",
 		"type": "event"
 },
-"address": "0xb0009Be42625f9AD53221DD0aC1BB1b799467AC0",
-"transactionHash": "0x7c930db90c1c6e07f5829283fceef6bde47ef1f4559b3464ce28db3873915424"
+"address": "0x9e5FE21D12629E05252d02f5a0B79fE841AaE1F1",
+"transactionHash": "0x5eacfe6280275250b46c0a9aa532cce5570c8624d2de5c811146395d0325631a"
 }
 },
-"address": "0xb0009Be42625f9AD53221DD0aC1BB1b799467AC0"
+"address": "0x9e5FE21D12629E05252d02f5a0B79fE841AaE1F1"
 }

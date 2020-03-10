@@ -1,6 +1,6 @@
 {
   "contractName": "AssetSwap",
-	"abi":  [
+	"abi":    [
 		{
 			"inputs": [
 				{

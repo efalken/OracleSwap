@@ -32,20 +32,22 @@ contract ManagedAccount {
 
     constructor(address payable _manager, uint _fee) public {
         manager = _manager;
-        investors[msg.sender] = true;
+        investor[msg.sender] = true;
         lastUpdateTime = now;
+        managerStatus = true;
         mgmtFee = _fee;
     }
 
     address payable public manager;
-    mapping(address payable => bool) public investors;
     mapping(address => bool) public approvedSwaps;
+    mapping(address => bool) public investor;
     mapping(bytes32 => Takercontract) public takercontracts;
     bytes32[] public ourTakerContracts;
     address[] public ourSwaps;
     uint public lastUpdateTime;
     uint public managerBalance;
     uint public totAUMlag;
+    bool public managerStatus;
     uint public mgmtFee;
 
     event AddedFunds(uint amount, address payor);
@@ -58,7 +60,7 @@ contract ManagedAccount {
     }
 
     modifier onlyInvestor() {
-        require(investors[msg.sender]);
+        require(investor[msg.sender]);
         _;
     }
 
@@ -68,7 +70,10 @@ contract ManagedAccount {
     }
 
     modifier onlyApproved() {
-        require(msg.sender == manager || investors[msg.sender]);
+        if (managerStatus)
+            require(msg.sender == manager || investor[msg.sender]);
+        else
+            require(investor[msg.sender]);
         _;
     }
 
@@ -82,6 +87,11 @@ contract ManagedAccount {
         external
         onlyInvestor
     {
+        updateFee();
+        uint manBal = managerBalance;
+        managerBalance = 0;
+        emit RemovedFunds(manBal, manager);
+        manager.transfer(manBal);
         manager = _manager;
     }
 
@@ -89,7 +99,7 @@ contract ManagedAccount {
         external
         onlyInvestor
     {
-        investors[newInvestor] = true;
+        investor[newInvestor] = true;
     }
 
     function removeInvestor(address payable oldInvestor)
@@ -97,7 +107,16 @@ contract ManagedAccount {
         onlyInvestor
     {
       require(oldInvestor != msg.sender);
-      investors[oldInvestor] = false;
+      investor[oldInvestor] = false;
+    }
+
+    function disableManager(bool _managerStatus)
+        external
+        onlyInvestor
+    {
+        if (managerStatus && !_managerStatus)
+            generateFee(totAUMlag);
+        managerStatus = _managerStatus;
     }
 
     function adjFee(uint newFee)
@@ -227,8 +246,8 @@ contract ManagedAccount {
         onlyInvestor
     {
         require(subzero(address(this).balance, amount) > managerBalance);
-        emit RemovedFunds(amount, investor);
-        investor.transfer(amount);
+        emit RemovedFunds(amount, msg.sender);
+        msg.sender.transfer(amount);
     }
 
     function managerWithdraw()
@@ -241,7 +260,7 @@ contract ManagedAccount {
         msg.sender.transfer(manBal);
     }
 
-    function withdrawFromBook(address swap, uint16 amount)
+    function withdrawLPToAS(address swap, uint16 amount)
         external
         onlyApproved
     {
@@ -249,20 +268,16 @@ contract ManagedAccount {
         AssetSwap s = AssetSwap(swap);
         /// fund in gwei, or 1/1000 of the unit of denomination
         /// adjust to finney when applied for real use (1e15)
-        uint totAUM = totAUMlag - amount * 1e9;
-        generateFee(totAUM);
         s.withdrawLP(amount);
     }
 
-    function withdrawFromSubk(address swap, uint16 amount, address lp, bytes2 subkid)
+    function withdrawTakerToAS(address swap, uint16 amount, address lp, bytes2 subkid)
         external
         onlyApproved
     {
         require(approvedSwaps[swap]);
         AssetSwap s = AssetSwap(swap);
         /// adjust this to finney for real use
-        uint totAUM = totAUMlag - amount * 1e9;
-        generateFee(totAUM);
         s.withdrawTaker(amount, lp, subkid);
     }
 
@@ -273,27 +288,6 @@ contract ManagedAccount {
         require(approvedSwaps[swap]);
         AssetSwap s = AssetSwap(swap);
         s.withdrawFromAssetSwap();
-    }
-
-    function updateFee()
-        external
-        onlyApproved
-        {
-        uint totAUM = 0;
-        uint lpMargin;
-        for (uint i = 0; i < ourSwaps.length; i++) {
-            AssetSwap s = AssetSwap(ourSwaps[i]);
-            (, lpMargin, , , , , , , , ) = s.getBookData(address(this));
-            totAUM += lpMargin;
-        }
-        uint takerMargin = 0;
-        for (uint i = 0; i < ourTakerContracts.length; i++) {
-            Takercontract storage k = takercontracts[ourTakerContracts[i]];
-            AssetSwap s = AssetSwap(k.swapAddress);
-            (, takerMargin, ) = s.getSubkData1(k.lp, ourTakerContracts[i]);
-            totAUM += takerMargin;
-        }
-        generateFee(totAUM);
     }
 
     function seeAUM()
@@ -319,6 +313,27 @@ contract ManagedAccount {
         }
         thisAccountBalance = address(this).balance;
         _managerBalance = managerBalance;
+    }
+
+    function updateFee()
+        public
+        onlyApproved
+        {
+        uint totAUM = 0;
+        uint lpMargin;
+        for (uint i = 0; i < ourSwaps.length; i++) {
+            AssetSwap s = AssetSwap(ourSwaps[i]);
+            (, lpMargin, , , , , , , , ) = s.getBookData(address(this));
+            totAUM += lpMargin;
+        }
+        uint takerMargin = 0;
+        for (uint i = 0; i < ourTakerContracts.length; i++) {
+            Takercontract storage k = takercontracts[ourTakerContracts[i]];
+            AssetSwap s = AssetSwap(k.swapAddress);
+            (, takerMargin, ) = s.getSubkData1(k.lp, ourTakerContracts[i]);
+            totAUM += takerMargin;
+        }
+        generateFee(totAUM);
     }
 
     function generateFee(uint newAUM)

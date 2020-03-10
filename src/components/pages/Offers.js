@@ -77,11 +77,11 @@ class Offers extends Component {
   openEtherscanContract() {
     let url;
     if (this.currentContract === "SPXUSD") {
-      url = "https://etherscan.io/address/0x18aBbBEb52122CE4e72D4C498e373fd124057b88#code"
+      url = "https://etherscan.io/address/0xD61Bf2354C8cDeda745F8a318ba43293ef858Deb#code"
     } else if (this.currentContract === "ETHUSD") {
-      url = "https://etherscan.io/address/0xD1ebfffC3Ae13864FE86B735630e20b54Cc4B919#code";
+      url = "https://etherscan.io/address/0xA4eb2D8A2221e8fFF1D46f92cBa1064daE647b47#code";
     } else {
-      url = "https://etherscan.io/address/0xeF841968872544Ae0a959Df96856be204DE717F6#code";
+      url = "https://etherscan.io/address/0xfA8B6F7f756745a38C9596222c1bfdBb4bA8a157#code";
     }
 
     window.open(url, "_blank");
@@ -96,7 +96,7 @@ class Offers extends Component {
     var LPMakes = {};
     contractweb3
       .getPastEvents("LPNewBook", {
-        fromBlock: 9000000,
+        fromBlock: 9600000,
         toBlock: "latest"
       })
       .then(

@@ -147,7 +147,7 @@ class Splash extends Component {
                           textDecoration: "none",
                             cursor: "pointer"
                         }}
-                        href="https://etherscan.io/address/0xb0009Be42625f9AD53221DD0aC1BB1b799467AC0#code"
+                        href="https://etherscan.io/address/0x9e5FE21D12629E05252d02f5a0B79fE841AaE1F1#code"
                       >
                         EtherScan
                       </a>

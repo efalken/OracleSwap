@@ -1,6 +1,6 @@
 {
   "contractName": "ManagedAccount",
-  "abi":     [
+  "abi":  [
 		{
 			"inputs": [
 				{
@@ -9,17 +9,11 @@
 					"type": "address"
 				},
 				{
-					"internalType": "address payable",
-					"name": "_investor",
-					"type": "address"
-				},
-				{
 					"internalType": "uint256",
 					"name": "_fee",
 					"type": "uint256"
 				}
 			],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "constructor"
 		},
@@ -62,12 +56,6 @@
 			"type": "event"
 		},
 		{
-			"payable": true,
-			"stateMutability": "payable",
-			"type": "fallback"
-		},
-		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "address",
@@ -77,12 +65,23 @@
 			],
 			"name": "activateEndBook",
 			"outputs": [],
-			"payable": true,
 			"stateMutability": "payable",
 			"type": "function"
 		},
 		{
-			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address payable",
+					"name": "newInvestor",
+					"type": "address"
+				}
+			],
+			"name": "addInvestor",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
 			"inputs": [
 				{
 					"internalType": "address",
@@ -92,12 +91,10 @@
 			],
 			"name": "addSwap",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -107,12 +104,10 @@
 			],
 			"name": "adjFee",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "uint16",
@@ -127,12 +122,10 @@
 			],
 			"name": "adjMinReqMarg",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [
 				{
 					"internalType": "address",
@@ -148,12 +141,10 @@
 					"type": "bool"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "address",
@@ -173,12 +164,23 @@
 			],
 			"name": "cancelSubcontract",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
+			"inputs": [
+				{
+					"internalType": "address payable",
+					"name": "_manager",
+					"type": "address"
+				}
+			],
+			"name": "changeManager",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -213,12 +215,10 @@
 			],
 			"name": "createBook",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "bool",
@@ -228,21 +228,17 @@
 			],
 			"name": "disableManager",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [],
 			"name": "fund",
 			"outputs": [],
-			"payable": true,
 			"stateMutability": "payable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -257,12 +253,10 @@
 			],
 			"name": "fundBookMargin",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -287,27 +281,29 @@
 			],
 			"name": "fundTakerMargin",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": true,
-			"inputs": [],
-			"name": "investor",
-			"outputs": [
+			"inputs": [
 				{
-					"internalType": "address payable",
+					"internalType": "address",
 					"name": "",
 					"type": "address"
 				}
 			],
-			"payable": false,
+			"name": "investor",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -317,12 +313,10 @@
 			],
 			"name": "investorWithdraw",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [],
 			"name": "lastUpdateTime",
 			"outputs": [
@@ -332,12 +326,10 @@
 					"type": "uint256"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [],
 			"name": "manager",
 			"outputs": [
@@ -347,12 +339,10 @@
 					"type": "address"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [],
 			"name": "managerBalance",
 			"outputs": [
@@ -362,12 +352,10 @@
 					"type": "uint256"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [],
 			"name": "managerStatus",
 			"outputs": [
@@ -377,21 +365,17 @@
 					"type": "bool"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [],
 			"name": "managerWithdraw",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [],
 			"name": "mgmtFee",
 			"outputs": [
@@ -401,12 +385,10 @@
 					"type": "uint256"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -422,12 +404,10 @@
 					"type": "address"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -443,12 +423,23 @@
 					"type": "bytes32"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": true,
+			"inputs": [
+				{
+					"internalType": "address payable",
+					"name": "oldInvestor",
+					"type": "address"
+				}
+			],
+			"name": "removeInvestor",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
 			"inputs": [],
 			"name": "seeAUM",
 			"outputs": [
@@ -473,12 +464,10 @@
 					"type": "uint256"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "address",
@@ -503,12 +492,10 @@
 			],
 			"name": "setFees",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -538,12 +525,10 @@
 			],
 			"name": "takeFromLP",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [
 				{
 					"internalType": "bytes32",
@@ -569,12 +554,10 @@
 					"type": "uint256"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": true,
 			"inputs": [],
 			"name": "totAUMlag",
 			"outputs": [
@@ -584,21 +567,17 @@
 					"type": "uint256"
 				}
 			],
-			"payable": false,
 			"stateMutability": "view",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [],
 			"name": "updateFee",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "address",
@@ -608,12 +587,10 @@
 			],
 			"name": "withdrawFromAS",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "address",
@@ -626,14 +603,12 @@
 					"type": "uint16"
 				}
 			],
-			"name": "withdrawFromBook",
+			"name": "withdrawLPToAS",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
-			"constant": false,
 			"inputs": [
 				{
 					"internalType": "address",
@@ -656,11 +631,14 @@
 					"type": "bytes2"
 				}
 			],
-			"name": "withdrawFromSubk",
+			"name": "withdrawTakerToAS",
 			"outputs": [],
-			"payable": false,
 			"stateMutability": "nonpayable",
 			"type": "function"
+		},
+		{
+			"stateMutability": "payable",
+			"type": "receive"
 		}
 	]
 }

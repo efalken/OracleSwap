@@ -6,7 +6,7 @@ oracle and AssetSwap. It works on a server or on a desktop. It also contains the
 Solidity contracts, though these are also verified on the etherscan. Developers
 can save time modifying this code, but it is also useful to give users the opton
 to download such a front end, because it makes their interactions more secure
-and allows the the ability to fully audit the functionality.
+and allows the ability to fully audit the functionality.
 
 Installation - Front End to OracleSwap contract
 -----------------------------------------------

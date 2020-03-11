@@ -155,6 +155,10 @@ To the extent you change Solidity methods you have to adjust the javascript
 pages appropriately. These will generally be in the 'src/components' folder,
 especially those within **pages**, **layout**, and **blocks**.
 
+Some of the gifs used in the FAQ/documentation page I did not put on GitHub.
+That is merely because they are very large, and you can see them on the
+oracleswap.co website without any risk.
+
 You can also use [Remix](https://remix.ethereum.org) to access these contracts.
 These contracts use compiler v0.6.3. To do this, you must first load the three
 solidity contracts into Remix (Book.sol, AssetSwap.sol, and Oracle.sol),
@@ -166,9 +170,11 @@ folder, as the front-end just uses only the Oracle and AssetSwap json files. One
 can create a front-end to a specific LP book using the Book.json file, though I
 have not done so.
 
+Security considerations are addressed in the technical document.
+
 There is a ManagedAccount.sol solidity file that can be used to create your own
-managed account that interacts with the AssetSwap contract. The one listed here
-is the LP on the BTC contract
+managed account that interacts with the AssetSwap contract. The Managed Account
+listed here is the LP on the BTC contract
 
 Managed Account
 

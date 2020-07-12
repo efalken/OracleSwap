@@ -19,7 +19,7 @@ protocol is to first install [Git](https://git-scm.com/downloads) on your
 computer. Then go to somewhere you want the OracleSwap folder, say
 `C:\users\joesmith\documents`, and from the command line type
 
-`git clone # https://github.com/efalken/OracleSwap.git`
+`git clone https://github.com/efalken/OracleSwap.git`
 
 This will create a new OracleSwap folder within 'documents.' The file
 **yarn.lock** contains all the node modules to be installed (800MB in the folder
